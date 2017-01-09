@@ -1,5 +1,5 @@
 title = "Random blog"
-baseurl = "http://ramaxlo.github.io/blog"
+baseurl = "https://ramaxlo.github.io/blog"
 languageCode = "zh-tw"
 copyright = "&copy; Ramax Lo 2016"
 
