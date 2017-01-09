@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Random blog</title>
-    <link>http://ramaxlo.github.io/blog/post/index.xml</link>
+    <link>https://ramaxlo.github.io/blog/post/index.xml</link>
     <description>Recent content in Posts on Random blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>&amp;copy; Ramax Lo 2016</copyright>
     <lastBuildDate>Mon, 09 Jan 2017 23:11:44 +0800</lastBuildDate>
-    <atom:link href="http://ramaxlo.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ramaxlo.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The First Post</title>
-      <link>http://ramaxlo.github.io/blog/post/first/</link>
+      <link>https://ramaxlo.github.io/blog/post/first/</link>
       <pubDate>Mon, 09 Jan 2017 23:11:44 +0800</pubDate>
       
-      <guid>http://ramaxlo.github.io/blog/post/first/</guid>
+      <guid>https://ramaxlo.github.io/blog/post/first/</guid>
       <description>&lt;p&gt;這是第一篇文章，用 &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; 產生，搭配 &lt;a href=&#34;https://github.com/tanksuzuki/hemingway&#34;&gt;Hemingway&lt;/a&gt;
 主題。&lt;/p&gt;
 </description>
