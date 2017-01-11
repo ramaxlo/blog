@@ -1,7 +1,7 @@
 +++
 title = "Add M.2 SSD For T450"
-draft = true
-date = "2017-01-09T23:32:25+08:00"
+draft = false
+date = "2017-01-11T23:58:08+08:00"
 
 +++
 
