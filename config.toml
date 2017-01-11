@@ -7,6 +7,7 @@ copyright = "&copy; Ramax Lo 2016"
 
 [params.highlight]
 style = "github"
+languages = ["go", "bash"]
 
 [[params.social]]
 url = "https://github.com/ramaxlo"
