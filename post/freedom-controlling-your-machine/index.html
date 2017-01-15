@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>掌控你的電腦的自由 | Random blog</title>
+<link rel="stylesheet" href="https://ramaxlo.github.io/blog/css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://ramaxlo.github.io/blog"><h1 class="title is-4">Random blog</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/ramaxlo">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">January 16, 2017</h2>
+    <h1 class="title">掌控你的電腦的自由</h1>
+    <div class="content">
+      <p>最近觀摩了一下同事所寫的 Ansible playbook，能夠自動啟動多個 AWS EC2
+實體，果然精妙。當中討論到為何在某個設定為何要把 Python 的路徑設為
+<code>/usr/local/bin/python</code>，而非一般的 <code>/usr/bin/python</code> 時，同事回答說因為 Mac OS 的
+Python 版本太舊，無法跑某些 task，不這樣設的話，Ansible
+預設只會用 Mac OS 的版本。然後我就很白目地問了：</p>
+
+<blockquote>
+<p>為什麼不把 /usr/bin/python 砍掉，然後建一個 symlink 指向新版本？</p>
+</blockquote>
+
+<p>身為一個 Linux 的使用者，會做這樣類似的事情是很正常的；例如在安裝完 ubuntu 後，我習慣會把
+<code>/bin/sh</code> 砍掉，重新指向到 <code>/bin/bash</code>。但是同事回我說不行，在 Mac OS
+下，你不能動 <code>/usr/bin</code> 目錄下的內容，即使你是 root 也不行。</p>
+
+<p>蛤？？？我沒聽錯吧？</p>
+
+<p>後來查了一下，原來這招叫做 <a href="https://en.wikipedia.org/wiki/System_Integrity_Protection">System Integrity Protection</a>。</p>
+
+<p>我可以理解，這樣做的原因是為了安全性考量，如果是一般不懂資安的使用者，那也就算了；但對於 power user
+而言，大家都是專業人士，這樣做我只覺得不可思議。我了解我在做什麼事情，我也體認到會有什麼樣的風險，也取得
+root 權限了，我要對我的電腦做什麼事是我的自由，為何要剝奪我的自由？</p>
+
+<p>固然資安非常重要，但根本之道應該是要教育使用者要有資安意識；身為你所購買電腦的主人，你有責任要維持電腦的正常運作不是嗎？要經常安裝重大安全性更新，不隨便亂執行來路不明的軟體，不隨便亂點奇怪的網站……這樣才能讓你的電腦永保安康；而不是硬生生地直接把使用者掌控電腦的權力拿掉，這根本是因噎廢食的作法。若使用者缺乏正確的觀念，你限制再多也無法阻止電腦被駭客入侵。</p>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Ramax Lo 2016</p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/bash.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
