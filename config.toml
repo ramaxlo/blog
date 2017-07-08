@@ -1,7 +1,7 @@
 title = "Random blog"
 baseurl = "https://ramaxlo.github.io/blog"
 languageCode = "zh-tw"
-copyright = "&copy; Ramax Lo 2016"
+copyright = "&copy; Ramax Lo 2017"
 
 [params]
 
