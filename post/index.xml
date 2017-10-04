@@ -2,13 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Random blog</title>
-    <link>https://ramaxlo.github.io/blog/post/index.xml</link>
+    <link>https://ramaxlo.github.io/blog/post/</link>
     <description>Recent content in Posts on Random blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>&amp;copy; Ramax Lo 2017</copyright>
-    <lastBuildDate>Sat, 08 Jul 2017 13:49:38 +0800</lastBuildDate>
-    <atom:link href="https://ramaxlo.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Oct 2017 15:19:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://ramaxlo.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>入手 ThinkPad X1 Carbon gen 5</title>
+      <link>https://ramaxlo.github.io/blog/post/x1c-gen5/</link>
+      <pubDate>Wed, 04 Oct 2017 15:19:21 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/post/x1c-gen5/</guid>
+      <description>從工作到現在，過去用過的、加上現在正在使用中的筆電共有四款，其中二款是中國製的、二款是日本製的。和中國製的比較起來，日本製的產品確實是比較耐用；其中有一台已經用了近 10 年，除了風扇因老化而自行替換外，就沒再出現過其他問題。當然也有人說日本製的也是會買到機王，不過至少我目前還沒遇到過，因此我對於日本製的筆電一直有很好的印象，而這也反映在我挑選筆電的考量要素中。在買筆電前，我都會先去找找看有沒有日本製的型號，再來才是看價格。然而在台灣還有在賣日本製筆電的品牌寥寥可數，且價格高不可攀，令人望之卻步。
+由於目前工作用的機器是 ThinkPad T450，雖然是中國製的，不過使用起來感覺還算不錯，鍵盤好打，也算是容易安裝 Linux 系統，因此當女友想換新筆電的時候，我第一個想到的就是 ThinkPad。有一天在偶然的情況下逛到了 Lenovo JP 的官網，赫然發現竟然有出所謂「米沢生產」的 ThinkPad X1 Carbon，而且在折扣時段的價錢竟然比在台灣買還要便宜了約台幣 1 萬元，當下和女友討論後就決定找代購來下訂了。
+ 
+之前一直以為 Lenovo 的筆電都是在中國生產，不過查了資料後發現 Lenovo 在 2015 年就開始在日本小批量生產部分的高階機型，x1c 就是其中之一。拿到貨後，可以在外包裝箱上看到印著「米沢生產」的字樣。這裡的「米沢」指的是 NEC 在山形縣的米澤工廠 (影片介紹)，同時這裡也是 LaVie 系列筆電的生產地。也許有人會覺得，啊料不都是一樣嗎，由誰來組裝有什麼差別？我個人以為差別可能就是差在 QA 這一塊，把關的比較嚴謹，抽到機王的機率也會比較低吧…
+至於這台中國品牌、日本製造的筆電，是否也和日本品牌、日本製造的一樣耐操，就讓時間來解答吧。</description>
+    </item>
     
     <item>
       <title>Install VyOS on APU2</title>
@@ -16,30 +31,11 @@
       <pubDate>Sat, 08 Jul 2017 13:49:38 +0800</pubDate>
       
       <guid>https://ramaxlo.github.io/blog/post/vyos-on-apu2/</guid>
-      <description>&lt;p&gt;由於之前&lt;a href=&#34;../transfer-to-routerboard&#34;&gt;把玩 RouterBoard 的經驗&lt;/a&gt;，讓我還想再找找看有沒有其他軟路由的替代方案。原因主要是因為 RouterOS 雖然也是 Linux based 的系統，但只有 base system 是開源軟體，其他 MikroTik
-開發的應用程式仍然還是封閉軟體。雖然它的效能也很不錯，設定上也非常有彈性，也很穩定，但對於一個已經用慣
- FOSS 的人來說，心裡還是有些疙瘩。&lt;/p&gt;
-
-&lt;p&gt;在網路上尋尋覓覓一陣子，發現蠻多網友使用 &lt;a href=&#34;http://http://pcengines.ch/&#34;&gt;PC Engines&lt;/a&gt; 的嵌入式 x86
-主板 APU2 上跑 &lt;a href=&#34;https://www.pfsense.org&#34;&gt;pfSense&lt;/a&gt; 這個 BSD based 的防火牆軟體。看一下硬體規格，有三張 intel
-Gb 網卡，價格 125 美金，還可以加購外殼，其他配件加起來大約台幣 5000 出頭吧，比起其他廠牌類似規格的要便宜許多，於是就下單訂了一台。&lt;/p&gt;
-
-&lt;p&gt;出貨後等了約莫二個禮拜才送到。在這段期間，我開始思考應該裝什麼系統才好。我不太想裝 pfSense，我想找看看有沒有 Linux based 的軟路由可以安裝；&lt;a href=&#34;http://www.ipfire.org/&#34;&gt;IPFire&lt;/a&gt; 是其中還蠻有名的開源專案，也是透過 Web 介面來設定，不過感覺好像也沒什麼特別的地方；後來找到了另外一個專案 &lt;a href=&#34;http://vyos.io&#34;&gt;VyOS&lt;/a&gt;，它有個很特別的東西讓我眼睛一亮：它不提供 Web 介面，所有的設定都必須要透過 CLI 完成；它提供了類似於 Cisco ios 的
-shell 來設定網路。稍微看了 wiki 文件後，就決定要來安裝它了。&lt;/p&gt;
-
-&lt;p&gt;上網搜尋一下才發現，似乎很少人在 APU2 上面安裝 VyOS，大部分不是裝 pfSense 就是裝 Ubuntu；比較有關的只有&lt;a href=&#34;http://blog.jasonantman.com/2011/09/vyatta-networkos-routerfirewall-on-alix-board-compact-flash/&#34;&gt;這篇文章&lt;/a&gt;，但這個也是安裝在前一代的產品上，並非 APU2；心想如果要裝上去，看來得要和機器奮戰一陣子了。&lt;/p&gt;
-
-&lt;p&gt;APU2 這塊板子也很特別，很多市面上賣的 x86 路由器都會提供 VGA port，偏偏 APU2 只提供 serial port，這意味著安裝程式必須要支援 serial console，而非僅僅 graphic console。所幸目前看到的軟路由安裝程式皆已考慮到這點，兩者都有支援，VyOS 自然也支援 serial console。不過它是寫死 9600 baud，然而 APU2 似乎只支援
-115200，這會造成開機時無法顯示開機選單，於是我花了不少時間在修改 VyOS iso 映像檔內的 baud rate
-設定。&lt;/p&gt;
-
-&lt;p&gt;另外一個問題是，不知為何，開機時它無法偵測到我的創見 USB 隨身碟，於是改用 SD 卡開機才得以順利進入登入提示符號。我沒試過其他隨身碟，希望只是個特例。&lt;/p&gt;
-
-&lt;p&gt;前前後後大概也花了我二個禮拜，終於被我給裝起來了。雖然只是 AMD G-series 的 CPU，不過做為路由器，效能似乎相當夠用，實測簡單的 SNAT 與基本防火牆規則，WAN-LAN iperf 雙向測試可直逼 Gb 理論值，speedtest 頻寬直上
-300M 毫不費力；重點是軟體都是 FOSS，真的是相當不錯啊…&lt;/p&gt;
-
-&lt;p&gt;詳細的安裝方法我記錄在 &lt;a href=&#34;https://wiki.vyos.net/wiki/Network_appliances#PC_Engines_APU2C4&#34;&gt;VyOS 的 wiki 頁面&lt;/a&gt;上，相信對 VyOS 社群的朋友應該會有幫助；至少有人先幫他們採過雷了 XD&lt;/p&gt;
-</description>
+      <description>由於之前把玩 RouterBoard 的經驗，讓我還想再找找看有沒有其他軟路由的替代方案。原因主要是因為 RouterOS 雖然也是 Linux based 的系統，但只有 base system 是開源軟體，其他 MikroTik 開發的應用程式仍然還是封閉軟體。雖然它的效能也很不錯，設定上也非常有彈性，也很穩定，但對於一個已經用慣 FOSS 的人來說，心裡還是有些疙瘩。
+在網路上尋尋覓覓一陣子，發現蠻多網友使用 PC Engines 的嵌入式 x86 主板 APU2 上跑 pfSense 這個 BSD based 的防火牆軟體。看一下硬體規格，有三張 intel Gb 網卡，價格 125 美金，還可以加購外殼，其他配件加起來大約台幣 5000 出頭吧，比起其他廠牌類似規格的要便宜許多，於是就下單訂了一台。
+出貨後等了約莫二個禮拜才送到。在這段期間，我開始思考應該裝什麼系統才好。我不太想裝 pfSense，我想找看看有沒有 Linux based 的軟路由可以安裝；IPFire 是其中還蠻有名的開源專案，也是透過 Web 介面來設定，不過感覺好像也沒什麼特別的地方；後來找到了另外一個專案 VyOS，它有個很特別的東西讓我眼睛一亮：它不提供 Web 介面，所有的設定都必須要透過 CLI 完成；它提供了類似於 Cisco ios 的 shell 來設定網路。稍微看了 wiki 文件後，就決定要來安裝它了。
+上網搜尋一下才發現，似乎很少人在 APU2 上面安裝 VyOS，大部分不是裝 pfSense 就是裝 Ubuntu；比較有關的只有這篇文章，但這個也是安裝在前一代的產品上，並非 APU2；心想如果要裝上去，看來得要和機器奮戰一陣子了。
+APU2 這塊板子也很特別，很多市面上賣的 x86 路由器都會提供 VGA port，偏偏 APU2 只提供 serial port，這意味著安裝程式必須要支援 serial console，而非僅僅 graphic console。所幸目前看到的軟路由安裝程式皆已考慮到這點，兩者都有支援，VyOS 自然也支援 serial console。不過它是寫死 9600 baud，然而 APU2 似乎只支援 115200，這會造成開機時無法顯示開機選單，於是我花了不少時間在修改 VyOS iso 映像檔內的 baud rate 設定。</description>
     </item>
     
     <item>
@@ -48,29 +44,13 @@ shell 來設定網路。稍微看了 wiki 文件後，就決定要來安裝它�
       <pubDate>Sat, 25 Mar 2017 03:56:51 +0800</pubDate>
       
       <guid>https://ramaxlo.github.io/blog/post/transfer-to-routerboard/</guid>
-      <description>&lt;p&gt;換到新辦公室也有一段時日了，對我們這些以網路為主要開發環境的公司來說，搬家後的第一件事就是要重新架設網路，這非常重要，沒有網路根本就沒法工作。&lt;/p&gt;
-
-&lt;p&gt;原本接到數據機的是一台 ASUS 的無線網路分享器，但因為機房距離辦公區域過遠，訊號品質不佳，故上網 google
-一下看有沒有大品牌又便宜一點的專用路由器來取代分享器；然後就看到一款 Netgear 的路由器，價錢還算
-ok，就買了下去。好不容易架好網路後沒多久，同事們紛紛哀嚎網路很慢常常斷線，我心裡想說應該不太可能是
-router 的問題吧…結果實際去測速後，幹真的是路由器的問題，上下傳最快只能到 30~40 Mbps，公司買的
-300M 網路不就浪費掉了…後來就緊急把舊的分享器再放回去擋一下，後續再設法解決。&lt;/p&gt;
-
-&lt;p&gt;到這時我才發現，原來並不是所有的路由器都能支援 300M 以上的頻寬，於是又再上網找有無合適的產品。網上論壇倒是有不少網友推薦某幾個品牌的路由器，不過都不算便宜…只是在討論串中不斷看到 RouterOS
-的字眼，心想這是什麼東西，感覺大家都很推崇，可是都說不好上手…阿到底是有多不好上手，懷著好奇的心理又繼續找，看到一個拍賣賣家正在賣 RB850Gx2，宣稱可以支援 300M 網路，看起來似乎蠻屌的，又不算貴，手一滑就買了一個回來測試。&lt;/p&gt;
-
-&lt;p&gt;下載 winbox 後連上路由器發現，嗯…設定是真的有點小複雜，參考賣家送的電子書和網路上的 Wiki
-後，才大略知道該如何做設定，並不像市面上消費用的分享器，只要填一下基本資訊就可以架好網路。當然賣家是很貼心地幫你設好一些基本的設定，讓你可以只填入 PPPoE 帳密就可以連上網，但你若想加一些防火牆設定，例如
-port forwarding，勢必得要先去了解 RouterOS 內部的封包處理流程才行。好在 RouterOS 也是 Linux-based
-的系統，同樣也是用 netfilter 實作防火牆，對於過去用過 iptables 的人來說，會有種熟悉的感覺，應該不會太難設定。&lt;/p&gt;
-
-&lt;p&gt;然後基本的上網設定弄完了，我又花了時間再切一個網段出來當作 guest network，然後再加防火牆規則限制連線，接著再花時間研究怎麼限流，弄好了以後，我又在研究怎麼標記封包來做 QoS，然後為了要自動把某些新上線的機器加入群組，又開始研究怎麼寫 script…是的，你可以在 RouterOS 上寫 script，還可以設定排程來執行這些 script…這真是太神奇了……&lt;/p&gt;
-
-&lt;p&gt;這樣玩一輪下來，我覺得 RouterOS 是一個非常有彈性的路由軟體，幾乎都能做到你想做的網路設定，非常適合給具備網路知識的人來使用，專業網管自然不在話下。不過對一般使用者，它的學習曲線就會很陡峭，難以上手。無怪乎
-pchome 幾乎沒賣這類產品，討論的網友似乎也很小眾…&lt;/p&gt;
-
-&lt;p&gt;阿，忘了提測速的結果，在接有線網路的情況下，網速直逼公司的頻寬上限，比那 Netgear 好太多了…&lt;/p&gt;
-</description>
+      <description>換到新辦公室也有一段時日了，對我們這些以網路為主要開發環境的公司來說，搬家後的第一件事就是要重新架設網路，這非常重要，沒有網路根本就沒法工作。
+原本接到數據機的是一台 ASUS 的無線網路分享器，但因為機房距離辦公區域過遠，訊號品質不佳，故上網 google 一下看有沒有大品牌又便宜一點的專用路由器來取代分享器；然後就看到一款 Netgear 的路由器，價錢還算 ok，就買了下去。好不容易架好網路後沒多久，同事們紛紛哀嚎網路很慢常常斷線，我心裡想說應該不太可能是 router 的問題吧…結果實際去測速後，幹真的是路由器的問題，上下傳最快只能到 30~40 Mbps，公司買的 300M 網路不就浪費掉了…後來就緊急把舊的分享器再放回去擋一下，後續再設法解決。
+到這時我才發現，原來並不是所有的路由器都能支援 300M 以上的頻寬，於是又再上網找有無合適的產品。網上論壇倒是有不少網友推薦某幾個品牌的路由器，不過都不算便宜…只是在討論串中不斷看到 RouterOS 的字眼，心想這是什麼東西，感覺大家都很推崇，可是都說不好上手…阿到底是有多不好上手，懷著好奇的心理又繼續找，看到一個拍賣賣家正在賣 RB850Gx2，宣稱可以支援 300M 網路，看起來似乎蠻屌的，又不算貴，手一滑就買了一個回來測試。
+下載 winbox 後連上路由器發現，嗯…設定是真的有點小複雜，參考賣家送的電子書和網路上的 Wiki 後，才大略知道該如何做設定，並不像市面上消費用的分享器，只要填一下基本資訊就可以架好網路。當然賣家是很貼心地幫你設好一些基本的設定，讓你可以只填入 PPPoE 帳密就可以連上網，但你若想加一些防火牆設定，例如 port forwarding，勢必得要先去了解 RouterOS 內部的封包處理流程才行。好在 RouterOS 也是 Linux-based 的系統，同樣也是用 netfilter 實作防火牆，對於過去用過 iptables 的人來說，會有種熟悉的感覺，應該不會太難設定。
+然後基本的上網設定弄完了，我又花了時間再切一個網段出來當作 guest network，然後再加防火牆規則限制連線，接著再花時間研究怎麼限流，弄好了以後，我又在研究怎麼標記封包來做 QoS，然後為了要自動把某些新上線的機器加入群組，又開始研究怎麼寫 script…是的，你可以在 RouterOS 上寫 script，還可以設定排程來執行這些 script…這真是太神奇了……
+這樣玩一輪下來，我覺得 RouterOS 是一個非常有彈性的路由軟體，幾乎都能做到你想做的網路設定，非常適合給具備網路知識的人來使用，專業網管自然不在話下。不過對一般使用者，它的學習曲線就會很陡峭，難以上手。無怪乎 pchome 幾乎沒賣這類產品，討論的網友似乎也很小眾…
+阿，忘了提測速的結果，在接有線網路的情況下，網速直逼公司的頻寬上限，比那 Netgear 好太多了…</description>
     </item>
     
     <item>
@@ -79,30 +59,13 @@ pchome 幾乎沒賣這類產品，討論的網友似乎也很小眾…&lt;/p&gt;
       <pubDate>Mon, 16 Jan 2017 02:17:56 +0800</pubDate>
       
       <guid>https://ramaxlo.github.io/blog/post/freedom-controlling-your-machine/</guid>
-      <description>&lt;p&gt;最近觀摩了一下同事所寫的 Ansible playbook，能夠自動啟動多個 AWS EC2
-實體，果然精妙。當中討論到為何在某個設定為何要把 Python 的路徑設為
-&lt;code&gt;/usr/local/bin/python&lt;/code&gt;，而非一般的 &lt;code&gt;/usr/bin/python&lt;/code&gt; 時，同事回答說因為 Mac OS 的
-Python 版本太舊，無法跑某些 task，不這樣設的話，Ansible
-預設只會用 Mac OS 的版本。然後我就很白目地問了：&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;為什麼不把 /usr/bin/python 砍掉，然後建一個 symlink 指向新版本？&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;身為一個 Linux 的使用者，會做這樣類似的事情是很正常的；例如在安裝完 ubuntu 後，我習慣會把
-&lt;code&gt;/bin/sh&lt;/code&gt; 砍掉，重新指向到 &lt;code&gt;/bin/bash&lt;/code&gt;。但是同事回我說不行，在 Mac OS
-下，你不能動 &lt;code&gt;/usr/bin&lt;/code&gt; 目錄下的內容，即使你是 root 也不行。&lt;/p&gt;
-
-&lt;p&gt;蛤？？？我沒聽錯吧？&lt;/p&gt;
-
-&lt;p&gt;後來查了一下，原來這招叫做 &lt;a href=&#34;https://en.wikipedia.org/wiki/System_Integrity_Protection&#34;&gt;System Integrity Protection&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;我可以理解，這樣做的原因是為了安全性考量，如果是一般不懂資安的使用者，那也就算了；但對於 power user
-而言，大家都是專業人士，這樣做我只覺得不可思議。我了解我在做什麼事情，我也體認到會有什麼樣的風險，也取得
-root 權限了，我要對我的電腦做什麼事是我的自由，為何要剝奪我的自由？&lt;/p&gt;
-
-&lt;p&gt;固然資安非常重要，但根本之道應該是要教育使用者要有資安意識；身為你所購買電腦的主人，你有責任要維持電腦的正常運作不是嗎？要經常安裝重大安全性更新，不隨便亂執行來路不明的軟體，不隨便亂點奇怪的網站……這樣才能讓你的電腦永保安康；而不是硬生生地直接把使用者掌控電腦的權力拿掉，這根本是因噎廢食的作法。若使用者缺乏正確的觀念，你限制再多也無法阻止電腦被駭客入侵。&lt;/p&gt;
-</description>
+      <description>最近觀摩了一下同事所寫的 Ansible playbook，能夠自動啟動多個 AWS EC2 實體，果然精妙。當中討論到為何在某個設定為何要把 Python 的路徑設為 /usr/local/bin/python，而非一般的 /usr/bin/python 時，同事回答說因為 Mac OS 的 Python 版本太舊，無法跑某些 task，不這樣設的話，Ansible 預設只會用 Mac OS 的版本。然後我就很白目地問了：
+ 為什麼不把 /usr/bin/python 砍掉，然後建一個 symlink 指向新版本？
+ 身為一個 Linux 的使用者，會做這樣類似的事情是很正常的；例如在安裝完 ubuntu 後，我習慣會把 /bin/sh 砍掉，重新指向到 /bin/bash。但是同事回我說不行，在 Mac OS 下，你不能動 /usr/bin 目錄下的內容，即使你是 root 也不行。
+蛤？？？我沒聽錯吧？
+後來查了一下，原來這招叫做 System Integrity Protection。
+我可以理解，這樣做的原因是為了安全性考量，如果是一般不懂資安的使用者，那也就算了；但對於 power user 而言，大家都是專業人士，這樣做我只覺得不可思議。我了解我在做什麼事情，我也體認到會有什麼樣的風險，也取得 root 權限了，我要對我的電腦做什麼事是我的自由，為何要剝奪我的自由？
+固然資安非常重要，但根本之道應該是要教育使用者要有資安意識；身為你所購買電腦的主人，你有責任要維持電腦的正常運作不是嗎？要經常安裝重大安全性更新，不隨便亂執行來路不明的軟體，不隨便亂點奇怪的網站……這樣才能讓你的電腦永保安康；而不是硬生生地直接把使用者掌控電腦的權力拿掉，這根本是因噎廢食的作法。若使用者缺乏正確的觀念，你限制再多也無法阻止電腦被駭客入侵。</description>
     </item>
     
     <item>
@@ -111,121 +74,15 @@ root 權限了，我要對我的電腦做什麼事是我的自由，為何要剝
       <pubDate>Wed, 11 Jan 2017 23:58:08 +0800</pubDate>
       
       <guid>https://ramaxlo.github.io/blog/post/t450-add-ssd/</guid>
-      <description>
-
-&lt;p&gt;2016 年的最後一天，大家都要去跨年，但是我沒去。在這一年將要結束的這一天，我決定要幫我的 Lenovo T450
-擴充硬碟空間，並且要在安裝後還能夠恢復原來的工作環境。這是一個大工程，值得我用一天的時間好好地搞一搞。&lt;/p&gt;
-
-&lt;p&gt;根據 Lenovo 的&lt;a href=&#34;https://download.lenovo.com/pccbbs/mobiles_pdf/t450_hmm_en_sp40a27225.pdf&#34;&gt;硬體維護手冊&lt;/a&gt;，T450
-有二個 M.2 插槽；其中一個已被 Wifi 網卡使用，另一個則原本是供 WWAN 使用，但若未購買搭 WWAN
-的機器，就會多出一個插槽可供利用。另外需要注意的是，M.2 介面的 SSD 有二種通訊協定規格，一個是
-SATA，另一個是 PCIe，並不是所有的筆電都支援這二種協定，故購買前一定要先上網查清楚，以免白花錢。又還有一點要注意，就算你確定了通訊協定規格，也不是所有廠商的 SSD 都可以和你的筆電相容，多查查網上的討論串，儘可能買有成功案例的廠牌會比較保險些。總之 M.2 SSD 就是這麼麻煩的東西。&lt;/p&gt;
-
-&lt;p&gt;有興趣的人可以參考這個&lt;a href=&#34;http://www.tpuser.idv.tw/wp/?p=2647&#34;&gt;連結&lt;/a&gt;了解更多關於 M.2 SSD 的細節。&lt;/p&gt;
-
-&lt;p&gt;好啦，買好了 SSD，也順利地安裝上去（硬體安裝步驟略過不提），打開筆電開關，BIOS 也順利抓到了硬體，接下來才是工程的主要部分：搬移系統檔案，設定以 SSD 為開機硬碟。以下將大略走一下執行步驟。&lt;/p&gt;
-
-&lt;h1 id=&#34;準備工作&#34;&gt;準備工作&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;下載 &lt;a href=&#34;https://software.opensuse.org&#34;&gt;openSUSE 開機映象檔&lt;/a&gt;，寫入到 USB 隨身碟中：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo dd if=openSUSE-Leap-42.2-DVD-x86_64.iso of=/dev/sdX bs=1M
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;當然你也可以用其他的 Linux 開機映象檔，只要有具備救援模式功能即可。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;備份你的系統。BJ4&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;開始搬移&#34;&gt;開始搬移&lt;/h1&gt;
-
-&lt;p&gt;首先用 USB 隨身碟開機，選擇救援模式，進入到命令列模式，然後分割 SSD 並且格式化：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;fdisk /dev/sdX
-mkfs.ext4 /dev/sdX1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;接著將原系統磁區掛載到 &lt;code&gt;/tmp/root&lt;/code&gt;, SSD 磁區掛載到 &lt;code&gt;/tmp/root2&lt;/code&gt;：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir /tmp/root
-mkdir /tmp/root2
-mount /dev/sdY1 /tmp/root
-mount /dev/sdX1 /tmp/root2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;開始複製檔案：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rsync -auv --exclude=&amp;quot;lost+found&amp;quot; /tmp/root/ /tmp/root2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;複製的時間可能會很久，端看你的資料量而定。&lt;/p&gt;
-
-&lt;h1 id=&#34;更新系統設定檔&#34;&gt;更新系統設定檔&lt;/h1&gt;
-
-&lt;p&gt;最重要的檔案就是 &lt;code&gt;/etc/fstab&lt;/code&gt;，這個檔案控制了使用那一個磁區來掛載 root 檔案系統，故當你搬移完系統檔案後，一定要記得更新這個檔案。&lt;/p&gt;
-
-&lt;p&gt;原來的檔案內容如下：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;UUID=dedaf79c-24e4-468f-a03c-7616cdfa8385 swap          swap       defaults              0 0
-UUID=e9912870-b350-4040-9ed3-386a4a5f849e /             ext4       acl,user_xattr        1 1
-UUID=77ec7af0-cc2c-44a5-8bc3-6c7913273ab6 /home         ext4       acl,user_xattr        1 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;更新為：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;UUID=dedaf79c-24e4-468f-a03c-7616cdfa8385 swap          swap       defaults              0 0
-UUID=cc3aa415-2c1f-43bd-a810-e0cf3d1614be /             ext4       acl,user_xattr,discard 1 1
-UUID=77ec7af0-cc2c-44a5-8bc3-6c7913273ab6 /home         ext4       acl,user_xattr        1 2
-none                                      /tmp          tmpfs      defaults              0 0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;注意我這邊使用的是檔案系統的 UUID 來掛載磁區，&lt;code&gt;/&lt;/code&gt; 的掛載磁區換成了 SSD，並且加上了 &lt;code&gt;discard&lt;/code&gt;
-參數；另外使用 tmpfs 來掛載 &lt;code&gt;/tmp&lt;/code&gt; 目錄，以避免大量的暫存檔案存在 SSD，降低 SSD 的壽命。&lt;/p&gt;
-
-&lt;p&gt;檔案系統的 UUID 可用指令 &lt;code&gt;ls -l /dev/disk/by-uuid&lt;/code&gt; 查詢。&lt;/p&gt;
-
-&lt;h1 id=&#34;安裝開機啟動程式-bootloader&#34;&gt;安裝開機啟動程式 (bootloader)&lt;/h1&gt;
-
-&lt;p&gt;首先要 chroot 到新的系統目錄：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mount --bind /dev /tmp/root2/dev
-mount --bind /sys /tmp/root2/sys
-mount --bind /proc /tmp/root2/proc
-chroot /tmp/root2 /bin/bash
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;更新 GRUB 設定檔：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;grub2-mkconfig -o /boot/grub2/grub.cfg
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;安裝開機啟動程式到 SSD 的開機啟動磁區 (MBR)：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;grub2-install /dev/sdX
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;退出 chroot 環境：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;exit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;卸載目錄：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;umount /tmp/root2/dev
-umount /tmp/root2/sys
-umount /tmp/root2/proc
-umount /tmp/root2
-umount /tmp/root
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;重新啟動電腦：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;reboot
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然後進入 BIOS，設定使用 SSD 做為開機硬碟，打完收工。&lt;/p&gt;
-</description>
+      <description>2016 年的最後一天，大家都要去跨年，但是我沒去。在這一年將要結束的這一天，我決定要幫我的 Lenovo T450 擴充硬碟空間，並且要在安裝後還能夠恢復原來的工作環境。這是一個大工程，值得我用一天的時間好好地搞一搞。
+根據 Lenovo 的硬體維護手冊，T450 有二個 M.2 插槽；其中一個已被 Wifi 網卡使用，另一個則原本是供 WWAN 使用，但若未購買搭 WWAN 的機器，就會多出一個插槽可供利用。另外需要注意的是，M.2 介面的 SSD 有二種通訊協定規格，一個是 SATA，另一個是 PCIe，並不是所有的筆電都支援這二種協定，故購買前一定要先上網查清楚，以免白花錢。又還有一點要注意，就算你確定了通訊協定規格，也不是所有廠商的 SSD 都可以和你的筆電相容，多查查網上的討論串，儘可能買有成功案例的廠牌會比較保險些。總之 M.2 SSD 就是這麼麻煩的東西。
+有興趣的人可以參考這個連結了解更多關於 M.2 SSD 的細節。
+好啦，買好了 SSD，也順利地安裝上去（硬體安裝步驟略過不提），打開筆電開關，BIOS 也順利抓到了硬體，接下來才是工程的主要部分：搬移系統檔案，設定以 SSD 為開機硬碟。以下將大略走一下執行步驟。
+準備工作  下載 openSUSE 開機映象檔，寫入到 USB 隨身碟中：
+sudo dd if=openSUSE-Leap-42.2-DVD-x86_64.iso of=/dev/sdX bs=1M  當然你也可以用其他的 Linux 開機映象檔，只要有具備救援模式功能即可。
+ 備份你的系統。BJ4
+  開始搬移 首先用 USB 隨身碟開機，選擇救援模式，進入到命令列模式，然後分割 SSD 並且格式化：
+fdisk /dev/sdX mkfs.ext4 /dev/sdX1  接著將原系統磁區掛載到 /tmp/root, SSD 磁區掛載到 /tmp/root2：</description>
     </item>
     
     <item>
@@ -234,9 +91,7 @@ umount /tmp/root
       <pubDate>Mon, 09 Jan 2017 23:11:44 +0800</pubDate>
       
       <guid>https://ramaxlo.github.io/blog/post/first/</guid>
-      <description>&lt;p&gt;這是第一篇文章，用 &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; 產生，搭配 &lt;a href=&#34;https://github.com/tanksuzuki/hemingway&#34;&gt;Hemingway&lt;/a&gt;
-主題。&lt;/p&gt;
-</description>
+      <description>這是第一篇文章，用 Hugo 產生，搭配 Hemingway 主題。</description>
     </item>
     
   </channel>
