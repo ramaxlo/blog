@@ -6,11 +6,22 @@
     <description>Recent content in Posts on Random blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <copyright>&amp;copy; Ramax Lo 2017</copyright>
-    <lastBuildDate>Thu, 05 Oct 2017 23:59:40 +0800</lastBuildDate>
+    <copyright>&amp;copy; Ramax Lo 2018</copyright>
+    <lastBuildDate>Fri, 13 Apr 2018 00:36:25 +0800</lastBuildDate>
     
 	<atom:link href="https://ramaxlo.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>openSUSE Leap 42.3 AMI 上架</title>
+      <link>https://ramaxlo.github.io/blog/post/opensuse_42.3_ami/</link>
+      <pubDate>Fri, 13 Apr 2018 00:36:25 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/post/opensuse_42.3_ami/</guid>
+      <description>自從 openSUSE 將 42.2 的 AMI 放上 AWS Marketplace 後，就很久沒在更新了，害我想用 42.3 都還要自己用 Kiwi 建立映象檔再上傳到 AWS 上。不過最近終於把 42.3 給放上來了，趁著最近要開新機器，就來試用一下。
+要啟動執行 openSUSE 的 instance 其實就跟執行 Ubuntu 的 instance 沒什麼兩樣，差別在於選擇 AMI 時要在 Community AMI 中選擇 openSUSE AMI。另外的差別就是預設帳號是 ec2-user，而不是大家習慣的 ubuntu。
+實際使用起來並沒有什麼問題，這個 AMI 還很貼心地幫你把 Cloud:Tools 套件庫預先設定好，一些常用的工具如 aws-cli、google-cloud-sdk、azure-cli 等都可以直接安裝，不需要自行加入套件庫或是下載個別套件再安裝了，相當方便。想跑 docker？套件庫中已經直接提供 v17.09.1 了，不是最新的，但也算很新的了…</description>
+    </item>
     
     <item>
       <title>ThinkPad X1 Carbon openSUSE Leap 安裝</title>

@@ -34,6 +34,17 @@
   <div class="container">
     
     <article>
+      <h2 class="subtitle is-6">April 13, 2018</h2>
+      <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/opensuse_42.3_ami/">openSUSE Leap 42.3 AMI 上架</a></h1>
+      <div class="content">
+        自從 openSUSE 將 42.2 的 AMI 放上 AWS Marketplace 後，就很久沒在更新了，害我想用 42.3 都還要自己用 Kiwi 建立映象檔再上傳到 AWS 上。不過最近終於把 42.3 給放上來了，趁著最近要開新機器，就來試用一下。
+要啟動執行 openSUSE 的 instance 其實就跟執行 Ubuntu 的 instance 沒什麼兩樣，差別在於選擇 AMI 時要在 Community AMI 中選擇 openSUSE AMI。另外的差別就是預設帳號是 ec2-user，而不是大家習慣的 ubuntu。
+實際使用起來並沒有什麼問題，這個 AMI 還很貼心地幫你把 Cloud:Tools 套件庫預先設定好，一些常用的工具如 aws-cli、google-cloud-sdk、azure-cli 等都可以直接安裝，不需要自行加入套件庫或是下載個別套件再安裝了，相當方便。想跑 docker？套件庫中已經直接提供 v17.09.1 了，不是最新的，但也算很新的了…
+        
+      </div>
+    </article>
+    
+    <article>
       <h2 class="subtitle is-6">October 5, 2017</h2>
       <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/x1c-opensuse-leap-install/">ThinkPad X1 Carbon openSUSE Leap 安裝</a></h1>
       <div class="content">
@@ -185,7 +196,7 @@ fdisk /dev/sdX mkfs.ext4 /dev/sdX1  接著將原系統磁區掛載到 /tmp/root,
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>&copy; Ramax Lo 2017</p>
+    <p>&copy; Ramax Lo 2018</p>
   </div>
 </section>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
