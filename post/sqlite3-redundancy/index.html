@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SQLite3 的強健性考量 | Random blog</title>
+<link rel="stylesheet" href="https://ramaxlo.github.io/blog/css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://ramaxlo.github.io/blog"><h1 class="title is-4">Random blog</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/ramaxlo">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">September 15, 2018</h2>
+    <h1 class="title">SQLite3 的強健性考量</h1>
+    <div class="content">
+      <p><a href="https://sqlite.org/index.html">SQLite3</a> 由於體積小、速度快，支援 SQL 語法，相信是眾多系統開發者心目中嵌入式小型資料庫的首選，敝公司當然也不例外。不過最近有時會發現有幾台安裝在客戶那的機器出現資料庫檔案寫壞的情況。雖然照著<a href="https://techblog.dorogin.com/sqliteexception-database-disk-image-is-malformed-77e59d547c50">這裡</a>所寫的步驟可以把一些記錄救回來，然而該資料庫儲存著錄影檔回放時所需要的時間區段記錄，按目前的程式邏輯，如果發現某個錄影檔在資料庫內沒有對應的記錄，那麼就會把該檔給刪除，以免佔用空間。</p>
+
+<p>問題就出在這裡。從寫壞的資料庫所救回來的並不是完整的，勢必會缺少一些記錄，因此程式就會把不存在記錄的錄影檔給刪掉。有時所缺少的記錄橫跨了一個禮拜，那就表示會有一整個禮拜的歷史影像就只因為資料庫寫爛了，就被砍掉了。萬一有重要事件在這一段時間發生，客戶就再也無法調出來看了。這真的是很令人困擾的事。</p>
+
+<p>我花了很多時間在研究為何資料庫檔案會被寫爛這件事。SQLite3 不同於一般的資料庫，它從一開始就是特別為了嵌入式的應用而設計，因此針對嵌入式系統中常見的插拔電情況設計了一套<a href="https://sqlite.org/atomiccommit.html#_rollback">復原機制</a>。從文件的解說中看來也確實是無懈可擊，不過<a href="https://sqlite.org/atomiccommit.html#_things_that_can_go_wrong">這裡</a>也提到了以下幾種可能會讓復原機制失效的情況：</p>
+
+<ul>
+<li>不良的檔案系統鎖定實作</li>
+<li>不完整的磁碟寫入 (<code>fsync()</code>)</li>
+<li>不完整的檔案刪除</li>
+<li>其他存取資料庫的行程意外寫入了垃圾資料</li>
+<li>Hot journal 被刪除或被改名</li>
+</ul>
+
+<p>另外由於資料庫檔案是寫在 SD 卡中，還需要考慮 SD 卡寫壞的情況。</p>
+
+<p>我想了很久，後來發現就算找出了原因，很有可能我也沒有時間與能力去修正 (不論是 SD
+卡的問題或是檔案系統的問題)。那麼為何不乾脆使出強健系統的終極奧義呢？</p>
+
+<p>何謂強健系統的終極奧義？概念超級簡單，就是多存幾份備份。君不見 RAID 不也是基於相同的概念嗎？只要想辦法將這些記錄在儲存於資料庫的同時，也將其備份分散存放在其他地方，那麼當資料庫壞掉時，系統就能夠再從這些地方取回紀錄以重建資料庫了。</p>
+
+<p>似乎是個值得思考的方向。</p>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Ramax Lo 2018</p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/bash.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
