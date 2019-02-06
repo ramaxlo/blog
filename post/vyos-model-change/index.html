@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VyOS 發布方式改變 | Random blog</title>
+<link rel="stylesheet" href="https://ramaxlo.github.io/blog/css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://ramaxlo.github.io/blog"><h1 class="title is-4">Random blog</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/ramaxlo">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">February 6, 2019</h2>
+    <h1 class="title">VyOS 發布方式改變</h1>
+    <div class="content">
+      <p><a href="https://blog.vyos.io/vyos-release-model-change">這一篇文章</a>其實是在 1.2 版發布前所寫的，有別於技術細節，這個比較是在談關於
+VyOS 這個專案的未來走向，因此特別另外開新的文章來討論這個部分。</p>
+
+<p>之前有提到過，其實 VyOS 是個挺小眾的專案。在 <a href="https://distrowatch.com/">DistroWatch</a> 的排名第 77 位，在 google trend
+上的搜尋熱度也遠遠不如 <a href="https://www.pfsense.org/">PfSense</a>。這些 VyOS 的使用者主要分為二類；一類是網路玩家，喜歡測試新功能甚於穩定性，主要會在家中或實驗室建置網路，或是某些小公司也可以用得很高興。另外一類則是大企業的網管人員，他們以穩定性為最高指導原則，所以如果新版本不夠穩定，他們是不會花時間升級的。</p>
+
+<p>以 VyOS 專案來說，大部分的使用者屬於第二類使用者，因此維護者們必須小心地測試新版本以確保新的修改不會造成任何的副作用，但這也意味著新版本發布週期會拉的很長，使得玩家們遲遲等不到新功能來測試並回報問題。另外一方面，第二類使用者在使用之餘，幾乎對該專案本身沒有任何實質上的貢獻；他們只是用，也不回報問題，也沒付錢買服務，但又要求要穩定，這對於只有少數開發者與貢獻者<sup class="footnote-ref" id="fnref:f1"><a href="#fn:f1">1</a></sup>的專案來說，不是一個健康的情況。</p>
+
+<p>因此，基於以上的理由，VyOS 決定要改變發布新版本的方式：</p>
+
+<ul>
+<li>提供滾動式版本 (rolling release) 給想要嘗鮮的玩家們測試，並且開發者能夠在短時間內測試他們貢獻的新功能。</li>
+<li>提供長期支援版本 (Long Term Support, LTS) 給企業用戶使用。LTS
+版本會有二年的維護週期，在這期間內，維護者會持續測試並加入新的 bugfix 與安全更新。</li>
+</ul>
+
+<p>然而與滾動式版本另外的不同處則是，滾動式版本的映象檔可以自由下載，LTS 版本的則只提供給付費用戶下載。也就是說，若你是企業用戶且又不想花時間自己 build LTS 版的映象檔，那麼就請花錢訂閱服務以取得更新。為了怕人誤解，以為
+VyOS 又要走回 <a href="https://en.wikipedia.org/wiki/Vyatta">Vyatta</a> 的老路，作者還強調你永遠可以自己 build 出 LTS 版的 iso 檔。</p>
+
+<p>此外，作者也開放貢獻者方案，也就是若你過去曾經貢獻過 VyOS 專案，那麼你可以免費得到 LTS iso
+訂閱服務 (小弟也很不要臉地去要了一個 XD)。</p>
+
+<p>當然有些細節部分這裡就略過不提，我個人認為這樣的安排是合理的，畢竟在現在如此冷門的情況下，如果缺乏商業資金的挹注，開源專案就必須靠著眾人的熱情持續下去。然而熱情能夠持續多久又是個問題…若能夠利用付費服務的方式來贊助專案的開發，至少開發者們不用為了生計問題傷腦筋，也才有更多心力花在專案上。雖然我並不是對這個專案很有愛，但我很喜歡它命令列的設定方式，算是除了 RouterOS 外的開源替代品。真的希望它能夠繼續活下去…</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:f1">作者提到，在某一個大型模組中，過去五年有貢獻程式碼的人不超過 50 個。
+ <a class="footnote-return" href="#fnref:f1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Ramax Lo 2018</p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/bash.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
