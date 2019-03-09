@@ -12,3 +12,7 @@ languages = ["go", "bash"]
 [[params.social]]
 url = "https://github.com/ramaxlo"
 fa_icon = "fa-github"
+
+[[params.social]]
+url = "/blog/index.xml"
+fa_icon = "fa-rss"
