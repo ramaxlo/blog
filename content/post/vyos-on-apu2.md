@@ -2,7 +2,7 @@
 draft = false
 date = "2017-07-08T13:49:38+08:00"
 title = "Install VyOS on APU2"
-
+tags = ["vyos", "apu2"]
 +++
 
 由於之前[把玩 RouterBoard 的經驗](../transfer-to-routerboard)，讓我還想再找找看有沒有其他軟路由的替代方案。原因主要是因為 RouterOS 雖然也是 Linux based 的系統，但只有 base system 是開源軟體，其他 MikroTik

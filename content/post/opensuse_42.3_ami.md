@@ -1,6 +1,9 @@
 ---
 title: "openSUSE Leap 42.3 AMI 上架"
 date: 2018-04-13T00:36:25+08:00
+tags:
+- opensuse
+- ec2
 ---
 
 自從 openSUSE 將 42.2 的 AMI 放上 [AWS Marketplace][1] 後，就很久沒在更新了，害我想用 42.3 都還要自己用

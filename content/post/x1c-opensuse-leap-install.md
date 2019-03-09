@@ -1,6 +1,9 @@
 ---
 title: "ThinkPad X1 Carbon openSUSE Leap 安裝"
 date: 2017-10-05T23:59:40+08:00
+tags:
+- x1c
+- opensuse
 ---
 
 [入手 x1c](../x1c-gen5) 之後，接下來的重要步驟就是要安裝系統。不例外，我們就是要在上面安裝 openSUSE Leap。以下小節會詳述安裝時遇到的一些問題與解決方法。

@@ -2,7 +2,7 @@
 title = "Add M.2 SSD For T450"
 draft = false
 date = "2017-01-11T23:58:08+08:00"
-
+tags = ["opensuse", "t450", "lenovo"]
 +++
 
 2016 年的最後一天，大家都要去跨年，但是我沒去。在這一年將要結束的這一天，我決定要幫我的 Lenovo T450
