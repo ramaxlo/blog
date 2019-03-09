@@ -34,6 +34,17 @@
   <div class="container">
     
     <article>
+      <h2 class="subtitle is-6">March 9, 2019</h2>
+      <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/apu2-home-router/">使用 APU2 架設家庭路由器</a></h1>
+      <div class="content">
+        有鑑於家中網路使用的頻寬分享器主要是由 ISP 所提供，其設備老舊，缺乏韌體更新，也缺少一些更進階的設定，讓我覺得該是時候將路由器的角色改由我最近把玩的 APU2 來代替，而原本的設備則單純做為 PPPoE relay 的角色。因此我將家中網路架構做了改變如下：
+ 使用 APU2 透過 PPPoE 撥接至 ISP，並做為對外網路的唯一介面 LAN 端電腦透過 switch 接至 APU2 的 LAN port 將原本設備的 virtual server 設定搬移至 APU2 架設 Wireguard VPN，並關閉對外的 web 與 sftp port 啟動 DNS forwarder 設定 zone based firewall，讓防火牆設定更容易管理  當然在轉換過程中也碰到了一些之前沒遇到的問題：
+ 由於 PPPoE header 會佔用 8 byte 的長度，因此 TCP MSS (Maximum segmemnt size) 必須要減掉 8 byte，否則封包會傳不出去。詳情可見這個文章。VyOS 的設定在此。 原本想設定路由器作為 wifi ap，然而測試後發現只能設定為 11n 模式，且速率並不是很理想，另外還有相容性的問題，因此還是決定使用現成的 wifi ap 來架設無線網路。  架設完成後，使用上並不會感覺到網路速度有受到什麼影響，不過現在網路設定更容易維護，且路由軟體也可以很容易地升級 (畢竟是開放源碼系統)，算是一舉數得。
+        
+      </div>
+    </article>
+    
+    <article>
       <h2 class="subtitle is-6">February 6, 2019</h2>
       <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/vyos-model-change/">VyOS 發布方式改變</a></h1>
       <div class="content">
@@ -168,30 +179,6 @@ APU2 這塊板子也很特別，很多市面上賣的 x86 路由器都會提供 
 後來查了一下，原來這招叫做 System Integrity Protection。
 我可以理解，這樣做的原因是為了安全性考量，如果是一般不懂資安的使用者，那也就算了；但對於 power user 而言，大家都是專業人士，這樣做我只覺得不可思議。我了解我在做什麼事情，我也體認到會有什麼樣的風險，也取得 root 權限了，我要對我的電腦做什麼事是我的自由，為何要剝奪我的自由？
 固然資安非常重要，但根本之道應該是要教育使用者要有資安意識；身為你所購買電腦的主人，你有責任要維持電腦的正常運作不是嗎？要經常安裝重大安全性更新，不隨便亂執行來路不明的軟體，不隨便亂點奇怪的網站……這樣才能讓你的電腦永保安康；而不是硬生生地直接把使用者掌控電腦的權力拿掉，這根本是因噎廢食的作法。若使用者缺乏正確的觀念，你限制再多也無法阻止電腦被駭客入侵。
-        
-      </div>
-    </article>
-    
-    <article>
-      <h2 class="subtitle is-6">January 11, 2017</h2>
-      <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/t450-add-ssd/">Add M.2 SSD For T450</a></h1>
-      <div class="content">
-        2016 年的最後一天，大家都要去跨年，但是我沒去。在這一年將要結束的這一天，我決定要幫我的 Lenovo T450 擴充硬碟空間，並且要在安裝後還能夠恢復原來的工作環境。這是一個大工程，值得我用一天的時間好好地搞一搞。
-根據 Lenovo 的硬體維護手冊，T450 有二個 M.2 插槽；其中一個已被 Wifi 網卡使用，另一個則原本是供 WWAN 使用，但若未購買搭 WWAN 的機器，就會多出一個插槽可供利用。另外需要注意的是，M.2 介面的 SSD 有二種通訊協定規格，一個是 SATA，另一個是 PCIe，並不是所有的筆電都支援這二種協定，故購買前一定要先上網查清楚，以免白花錢。又還有一點要注意，就算你確定了通訊協定規格，也不是所有廠商的 SSD 都可以和你的筆電相容，多查查網上的討論串，儘可能買有成功案例的廠牌會比較保險些。總之 M.2 SSD 就是這麼麻煩的東西。
-有興趣的人可以參考這個連結了解更多關於 M.2 SSD 的細節。
-好啦，買好了 SSD，也順利地安裝上去（硬體安裝步驟略過不提），打開筆電開關，BIOS 也順利抓到了硬體，接下來才是工程的主要部分：搬移系統檔案，設定以 SSD 為開機硬碟。以下將大略走一下執行步驟。
-準備工作  下載 openSUSE 開機映象檔，寫入到 USB 隨身碟中：
-sudo dd if=openSUSE-Leap-42.2-DVD-x86_64.iso of=/dev/sdX bs=1M  當然你也可以用其他的 Linux 開機映象檔，只要有具備救援模式功能即可。
- 備份你的系統。BJ4
-  開始搬移 首先用 USB 隨身碟開機，選擇救援模式，進入到命令列模式，然後分割 SSD 並且格式化：
-fdisk /dev/sdX mkfs.ext4 /dev/sdX1  接著將原系統磁區掛載到 /tmp/root, SSD 磁區掛載到 /tmp/root2：
-        
-        ...<a class="button is-link" href="https://ramaxlo.github.io/blog/post/t450-add-ssd/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
         
       </div>
     </article>

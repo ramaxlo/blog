@@ -34,6 +34,30 @@
   <div class="container">
     
     <article>
+      <h2 class="subtitle is-6">January 11, 2017</h2>
+      <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/t450-add-ssd/">Add M.2 SSD For T450</a></h1>
+      <div class="content">
+        2016 年的最後一天，大家都要去跨年，但是我沒去。在這一年將要結束的這一天，我決定要幫我的 Lenovo T450 擴充硬碟空間，並且要在安裝後還能夠恢復原來的工作環境。這是一個大工程，值得我用一天的時間好好地搞一搞。
+根據 Lenovo 的硬體維護手冊，T450 有二個 M.2 插槽；其中一個已被 Wifi 網卡使用，另一個則原本是供 WWAN 使用，但若未購買搭 WWAN 的機器，就會多出一個插槽可供利用。另外需要注意的是，M.2 介面的 SSD 有二種通訊協定規格，一個是 SATA，另一個是 PCIe，並不是所有的筆電都支援這二種協定，故購買前一定要先上網查清楚，以免白花錢。又還有一點要注意，就算你確定了通訊協定規格，也不是所有廠商的 SSD 都可以和你的筆電相容，多查查網上的討論串，儘可能買有成功案例的廠牌會比較保險些。總之 M.2 SSD 就是這麼麻煩的東西。
+有興趣的人可以參考這個連結了解更多關於 M.2 SSD 的細節。
+好啦，買好了 SSD，也順利地安裝上去（硬體安裝步驟略過不提），打開筆電開關，BIOS 也順利抓到了硬體，接下來才是工程的主要部分：搬移系統檔案，設定以 SSD 為開機硬碟。以下將大略走一下執行步驟。
+準備工作  下載 openSUSE 開機映象檔，寫入到 USB 隨身碟中：
+sudo dd if=openSUSE-Leap-42.2-DVD-x86_64.iso of=/dev/sdX bs=1M  當然你也可以用其他的 Linux 開機映象檔，只要有具備救援模式功能即可。
+ 備份你的系統。BJ4
+  開始搬移 首先用 USB 隨身碟開機，選擇救援模式，進入到命令列模式，然後分割 SSD 並且格式化：
+fdisk /dev/sdX mkfs.ext4 /dev/sdX1  接著將原系統磁區掛載到 /tmp/root, SSD 磁區掛載到 /tmp/root2：
+        
+        ...<a class="button is-link" href="https://ramaxlo.github.io/blog/post/t450-add-ssd/" style="height:28px">
+          Read more
+          <span class="icon is-small">
+            <i class="fa fa-angle-double-right"></i>
+          </span>
+        </a>
+        
+      </div>
+    </article>
+    
+    <article>
       <h2 class="subtitle is-6">January 9, 2017</h2>
       <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/first/">The First Post</a></h1>
       <div class="content">
