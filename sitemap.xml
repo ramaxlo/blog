@@ -63,7 +63,31 @@
   </url>
   
   <url>
+    <loc>https://ramaxlo.github.io/blog/tags/apu2/</loc>
+    <lastmod>2019-03-09T22:21:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ramaxlo.github.io/blog/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramaxlo.github.io/blog/tags/ec2/</loc>
+    <lastmod>2018-04-13T00:36:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramaxlo.github.io/blog/tags/lenovo/</loc>
+    <lastmod>2017-10-04T15:19:21+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramaxlo.github.io/blog/tags/opensuse/</loc>
+    <lastmod>2018-04-13T00:36:25+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -80,7 +104,44 @@
   </url>
   
   <url>
+    <loc>https://ramaxlo.github.io/blog/tags/routerboard/</loc>
+    <lastmod>2017-03-25T03:56:51+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramaxlo.github.io/blog/tags/routeros/</loc>
+    <lastmod>2017-03-25T03:56:51+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramaxlo.github.io/blog/tags/sqlite3/</loc>
+    <lastmod>2018-09-15T16:07:43+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramaxlo.github.io/blog/tags/t450/</loc>
+    <lastmod>2017-01-11T23:58:08+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ramaxlo.github.io/blog/tags/</loc>
+    <lastmod>2019-03-09T22:21:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramaxlo.github.io/blog/tags/vyos/</loc>
+    <lastmod>2019-03-09T22:21:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ramaxlo.github.io/blog/tags/x1c/</loc>
+    <lastmod>2017-10-05T23:59:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   

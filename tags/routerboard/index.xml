@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Routerboard on Random blog</title>
+    <link>https://ramaxlo.github.io/blog/tags/routerboard/</link>
+    <description>Recent content in Routerboard on Random blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>&amp;copy; Ramax Lo 2019</copyright>
+    <lastBuildDate>Sat, 25 Mar 2017 03:56:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://ramaxlo.github.io/blog/tags/routerboard/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>轉移網路到 RouterBoard</title>
+      <link>https://ramaxlo.github.io/blog/post/transfer-to-routerboard/</link>
+      <pubDate>Sat, 25 Mar 2017 03:56:51 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/post/transfer-to-routerboard/</guid>
+      <description>換到新辦公室也有一段時日了，對我們這些以網路為主要開發環境的公司來說，搬家後的第一件事就是要重新架設網路，這非常重要，沒有網路根本就沒法工作。
+原本接到數據機的是一台 ASUS 的無線網路分享器，但因為機房距離辦公區域過遠，訊號品質不佳，故上網 google 一下看有沒有大品牌又便宜一點的專用路由器來取代分享器；然後就看到一款 Netgear 的路由器，價錢還算 ok，就買了下去。好不容易架好網路後沒多久，同事們紛紛哀嚎網路很慢常常斷線，我心裡想說應該不太可能是 router 的問題吧…結果實際去測速後，幹真的是路由器的問題，上下傳最快只能到 30~40 Mbps，公司買的 300M 網路不就浪費掉了…後來就緊急把舊的分享器再放回去擋一下，後續再設法解決。
+到這時我才發現，原來並不是所有的路由器都能支援 300M 以上的頻寬，於是又再上網找有無合適的產品。網上論壇倒是有不少網友推薦某幾個品牌的路由器，不過都不算便宜…只是在討論串中不斷看到 RouterOS 的字眼，心想這是什麼東西，感覺大家都很推崇，可是都說不好上手…阿到底是有多不好上手，懷著好奇的心理又繼續找，看到一個拍賣賣家正在賣 RB850Gx2，宣稱可以支援 300M 網路，看起來似乎蠻屌的，又不算貴，手一滑就買了一個回來測試。
+下載 winbox 後連上路由器發現，嗯…設定是真的有點小複雜，參考賣家送的電子書和網路上的 Wiki 後，才大略知道該如何做設定，並不像市面上消費用的分享器，只要填一下基本資訊就可以架好網路。當然賣家是很貼心地幫你設好一些基本的設定，讓你可以只填入 PPPoE 帳密就可以連上網，但你若想加一些防火牆設定，例如 port forwarding，勢必得要先去了解 RouterOS 內部的封包處理流程才行。好在 RouterOS 也是 Linux-based 的系統，同樣也是用 netfilter 實作防火牆，對於過去用過 iptables 的人來說，會有種熟悉的感覺，應該不會太難設定。
+然後基本的上網設定弄完了，我又花了時間再切一個網段出來當作 guest network，然後再加防火牆規則限制連線，接著再花時間研究怎麼限流，弄好了以後，我又在研究怎麼標記封包來做 QoS，然後為了要自動把某些新上線的機器加入群組，又開始研究怎麼寫 script…是的，你可以在 RouterOS 上寫 script，還可以設定排程來執行這些 script…這真是太神奇了……
+這樣玩一輪下來，我覺得 RouterOS 是一個非常有彈性的路由軟體，幾乎都能做到你想做的網路設定，非常適合給具備網路知識的人來使用，專業網管自然不在話下。不過對一般使用者，它的學習曲線就會很陡峭，難以上手。無怪乎 pchome 幾乎沒賣這類產品，討論的網友似乎也很小眾…
+阿，忘了提測速的結果，在接有線網路的情況下，網速直逼公司的頻寬上限，比那 Netgear 好太多了…</description>
+    </item>
+    
+  </channel>
+</rss>

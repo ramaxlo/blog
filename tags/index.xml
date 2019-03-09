@@ -7,9 +7,100 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>&amp;copy; Ramax Lo 2019</copyright>
+    <lastBuildDate>Sat, 09 Mar 2019 22:21:19 +0800</lastBuildDate>
     
 	<atom:link href="https://ramaxlo.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Apu2</title>
+      <link>https://ramaxlo.github.io/blog/tags/apu2/</link>
+      <pubDate>Sat, 09 Mar 2019 22:21:19 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/apu2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ec2</title>
+      <link>https://ramaxlo.github.io/blog/tags/ec2/</link>
+      <pubDate>Fri, 13 Apr 2018 00:36:25 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/ec2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lenovo</title>
+      <link>https://ramaxlo.github.io/blog/tags/lenovo/</link>
+      <pubDate>Wed, 04 Oct 2017 15:19:21 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/lenovo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Opensuse</title>
+      <link>https://ramaxlo.github.io/blog/tags/opensuse/</link>
+      <pubDate>Fri, 13 Apr 2018 00:36:25 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/opensuse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Routerboard</title>
+      <link>https://ramaxlo.github.io/blog/tags/routerboard/</link>
+      <pubDate>Sat, 25 Mar 2017 03:56:51 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/routerboard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Routeros</title>
+      <link>https://ramaxlo.github.io/blog/tags/routeros/</link>
+      <pubDate>Sat, 25 Mar 2017 03:56:51 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/routeros/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sqlite3</title>
+      <link>https://ramaxlo.github.io/blog/tags/sqlite3/</link>
+      <pubDate>Sat, 15 Sep 2018 16:07:43 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/sqlite3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>T450</title>
+      <link>https://ramaxlo.github.io/blog/tags/t450/</link>
+      <pubDate>Wed, 11 Jan 2017 23:58:08 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/t450/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vyos</title>
+      <link>https://ramaxlo.github.io/blog/tags/vyos/</link>
+      <pubDate>Sat, 09 Mar 2019 22:21:19 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/vyos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>X1c</title>
+      <link>https://ramaxlo.github.io/blog/tags/x1c/</link>
+      <pubDate>Thu, 05 Oct 2017 23:59:40 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/x1c/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

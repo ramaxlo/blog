@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opensuse on Random blog</title>
+    <link>https://ramaxlo.github.io/blog/tags/opensuse/</link>
+    <description>Recent content in Opensuse on Random blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>&amp;copy; Ramax Lo 2019</copyright>
+    <lastBuildDate>Fri, 13 Apr 2018 00:36:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://ramaxlo.github.io/blog/tags/opensuse/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>openSUSE Leap 42.3 AMI 上架</title>
+      <link>https://ramaxlo.github.io/blog/post/opensuse_42.3_ami/</link>
+      <pubDate>Fri, 13 Apr 2018 00:36:25 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/post/opensuse_42.3_ami/</guid>
+      <description>自從 openSUSE 將 42.2 的 AMI 放上 AWS Marketplace 後，就很久沒在更新了，害我想用 42.3 都還要自己用 Kiwi 建立映象檔再上傳到 AWS 上。不過最近終於把 42.3 給放上來了，趁著最近要開新機器，就來試用一下。
+要啟動執行 openSUSE 的 instance 其實就跟執行 Ubuntu 的 instance 沒什麼兩樣，差別在於選擇 AMI 時要在 Community AMI 中選擇 openSUSE AMI。另外的差別就是預設帳號是 ec2-user，而不是大家習慣的 ubuntu。
+實際使用起來並沒有什麼問題，這個 AMI 還很貼心地幫你把 Cloud:Tools 套件庫預先設定好，一些常用的工具如 aws-cli、google-cloud-sdk、azure-cli 等都可以直接安裝，不需要自行加入套件庫或是下載個別套件再安裝了，相當方便。想跑 docker？套件庫中已經直接提供 v17.09.1 了，不是最新的，但也算很新的了…</description>
+    </item>
+    
+    <item>
+      <title>ThinkPad X1 Carbon openSUSE Leap 安裝</title>
+      <link>https://ramaxlo.github.io/blog/post/x1c-opensuse-leap-install/</link>
+      <pubDate>Thu, 05 Oct 2017 23:59:40 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/post/x1c-opensuse-leap-install/</guid>
+      <description>入手 x1c 之後，接下來的重要步驟就是要安裝系統。不例外，我們就是要在上面安裝 openSUSE Leap。以下小節會詳述安裝時遇到的一些問題與解決方法。
+調整磁碟分割表為 msdos 類型 由於 x1c 預裝系統是 Windows 10，我沒打算設定雙系統開機，所以我在安裝前先進入 BIOS，把 secure boot 以及 UEFI 關閉，改用 legacy boot。安裝完後發現 BIOS 無法正確地從 MBR 開機。搞了半天才發現，legacy boot 只支援 msdos 類型的分割表，它看不懂 GPT 類型的分割表。是故又重新分割了一次磁碟才能正常開機。
+電源管理不正常 x1c 配備的是 i7-7500U，為第七代的 Core i CPU，openSUSE Leap 42.3 的預設 4.4 版核心似乎不能很好地支援這個較新的 CPU，以致於雖然可以正常休眠，但是從休眠狀態回復後再關機，就會發生關機不完全的現象；雖然電源燈是關閉的，但仍能感覺機身並沒有降溫的傾向；再次按電源鍵要開機，卻發現再也開不起來，結果被迫要用迴紋針去戳機背的 reset 鍵才會回復正常。搜尋了網上論壇發現有網友建議在 x1c 上安裝 Linux，最好核心要升級到 4.12 以上，驅動程式的支援才會比較完整。所以就立馬升級核心到最新的 4.13，果然問題就解決了。
+原本正常來說，升級核心需要自行下載核心原始碼來編譯；不過 openSUSE 在 OBS 上已經有 Factory 套件庫可供安裝最新版本的核心，所以只需加入新套件庫後就可以安裝。
+升級步驟如下：
+sudo zypper ar https://download.opensuse.org/repositories/Kernel:/stable/standard/ kernel-stable sudo zypper ref kernel-stable sudo zypper in kernel-default  Trackpad 中鍵無作用 也許是因為 x1c 的觸控板是比較新的硬體，openSUSE Leap 42.</description>
+    </item>
+    
+    <item>
+      <title>Add M.2 SSD For T450</title>
+      <link>https://ramaxlo.github.io/blog/post/t450-add-ssd/</link>
+      <pubDate>Wed, 11 Jan 2017 23:58:08 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/post/t450-add-ssd/</guid>
+      <description>2016 年的最後一天，大家都要去跨年，但是我沒去。在這一年將要結束的這一天，我決定要幫我的 Lenovo T450 擴充硬碟空間，並且要在安裝後還能夠恢復原來的工作環境。這是一個大工程，值得我用一天的時間好好地搞一搞。
+根據 Lenovo 的硬體維護手冊，T450 有二個 M.2 插槽；其中一個已被 Wifi 網卡使用，另一個則原本是供 WWAN 使用，但若未購買搭 WWAN 的機器，就會多出一個插槽可供利用。另外需要注意的是，M.2 介面的 SSD 有二種通訊協定規格，一個是 SATA，另一個是 PCIe，並不是所有的筆電都支援這二種協定，故購買前一定要先上網查清楚，以免白花錢。又還有一點要注意，就算你確定了通訊協定規格，也不是所有廠商的 SSD 都可以和你的筆電相容，多查查網上的討論串，儘可能買有成功案例的廠牌會比較保險些。總之 M.2 SSD 就是這麼麻煩的東西。
+有興趣的人可以參考這個連結了解更多關於 M.2 SSD 的細節。
+好啦，買好了 SSD，也順利地安裝上去（硬體安裝步驟略過不提），打開筆電開關，BIOS 也順利抓到了硬體，接下來才是工程的主要部分：搬移系統檔案，設定以 SSD 為開機硬碟。以下將大略走一下執行步驟。
+準備工作  下載 openSUSE 開機映象檔，寫入到 USB 隨身碟中：
+sudo dd if=openSUSE-Leap-42.2-DVD-x86_64.iso of=/dev/sdX bs=1M  當然你也可以用其他的 Linux 開機映象檔，只要有具備救援模式功能即可。
+ 備份你的系統。BJ4
+  開始搬移 首先用 USB 隨身碟開機，選擇救援模式，進入到命令列模式，然後分割 SSD 並且格式化：
+fdisk /dev/sdX mkfs.ext4 /dev/sdX1  接著將原系統磁區掛載到 /tmp/root, SSD 磁區掛載到 /tmp/root2：</description>
+    </item>
+    
+  </channel>
+</rss>
