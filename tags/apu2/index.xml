@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Apu2 on Random blog</title>
+    <title>apu2 on Random blog</title>
     <link>https://ramaxlo.github.io/blog/tags/apu2/</link>
-    <description>Recent content in Apu2 on Random blog</description>
+    <description>Recent content in apu2 on Random blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <copyright>&amp;copy; Ramax Lo 2019</copyright>
+    <copyright>&amp;copy; Ramax Lo 2020</copyright>
     <lastBuildDate>Sat, 09 Mar 2019 22:21:19 +0800</lastBuildDate>
     
 	<atom:link href="https://ramaxlo.github.io/blog/tags/apu2/index.xml" rel="self" type="application/rss+xml" />
@@ -33,7 +33,7 @@
 雖然早已知道新版本出來了，我超想幫我的 APU2 升級的 (之前是跑 1.1.8)；然而由於工作忙碌的關係，一直抽不出一段空閒的時間來好好的弄一下。直到最近因為過年輪到我在公司值班，算是找到了一個好機會可以來玩玩。
 相較於 1.1 版是在 Debian 6 上開發，1.2 版則是基於 Debian 8 做開發，也因此在 isolinux 以及其他的設定上有了比較大的差異，以至於之前在 Wiki 上的文件已不再適用於 1.2 版，需要再做更新。需要更新的部分如下：
  isolinux 的設定相較 1.1 有了很大的變化。供 serial port only 的機器使用的選項不見了，只有純 VGA console 的開機選單可用，因此這部分需要做比較大的修改以符合 APU2 的需求。 設定檔的格式從 1.1 升級到 1.2 有了比較大的修改，因此在 1.2 中有部分的 script 是在做格式轉換的工作。這部分的 baud rate 設定是寫死成 9600，故也需要做修改。 1.2 中安裝程式提供了一個 grub 設定檔的模版，這部分也是寫死成 9600，故需要做修改。  前前後後大概花了我二天的時間做修改與測試，總算是弄好了。這些修改我也一併更新到 Wiki 上，供同好參考。
-註： 自從上次把 1.1.7 的安裝步驟更新到 wiki 後，發現似乎愈來愈多人在論壇上問關於在 APU2 上安裝的問題…怎麼說呢…我覺得 APU2 真的是個好物啊，價格實惠 (網路上隨便一個 x86 的單板電腦，價格都差不多要比 APU2 貴上個四分之一以上)、效能夠用 (直上 300 / 100 沒問題)，再加上免費的 VyOS 簡直是絕配啊…真的很想把家中的分享器都換成 APU2 啊…</description>
+註：自從上次把 1.1.7 的安裝步驟更新到 wiki 後，發現似乎愈來愈多人在論壇上問關於在 APU2 上安裝的問題…怎麼說呢…我覺得 APU2 真的是個好物啊，價格實惠 (網路上隨便一個 x86 的單板電腦，價格都差不多要比 APU2 貴上個四分之一以上)、效能夠用 (直上 300 / 100 沒問題)，再加上免費的 VyOS 簡直是絕配啊…真的很想把家中的分享器都換成 APU2 啊…</description>
     </item>
     
     <item>

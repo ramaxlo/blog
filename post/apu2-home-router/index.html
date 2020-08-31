@@ -43,7 +43,6 @@
     <div class="content">
       <p>有鑑於家中網路使用的頻寬分享器主要是由 ISP 所提供，其設備老舊，缺乏韌體更新，也缺少一些更進階的設定，讓我覺得該是時候將路由器的角色改由我最近把玩的 APU2 來代替，而原本的設備則單純做為
 PPPoE relay 的角色。因此我將家中網路架構做了改變如下：</p>
-
 <ul>
 <li>使用 APU2 透過 PPPoE 撥接至 ISP，並做為對外網路的唯一介面</li>
 <li>LAN 端電腦透過 switch 接至 APU2 的 LAN port</li>
@@ -52,15 +51,12 @@ PPPoE relay 的角色。因此我將家中網路架構做了改變如下：</p>
 <li>啟動 DNS forwarder</li>
 <li>設定 zone based firewall，讓防火牆設定更容易管理</li>
 </ul>
-
 <p>當然在轉換過程中也碰到了一些之前沒遇到的問題：</p>
-
 <ul>
 <li>由於 PPPoE header 會佔用 8 byte 的長度，因此 TCP MSS (<a href="https://en.wikipedia.org/wiki/Maximum_segment_size">Maximum segmemnt size</a>) 必須要減掉
 8 byte，否則封包會傳不出去。詳情可見<a href="https://samuel.kadolph.com/2015/02/mtu-and-tcp-mss-when-using-pppoe-2/">這個文章</a>。VyOS 的設定<a href="https://wiki.vyos.net/wiki/PPPoE">在此</a>。</li>
 <li>原本想設定路由器作為 wifi ap，然而測試後發現只能設定為 11n 模式，且速率並不是很理想，另外還有相容性的問題，因此還是決定使用現成的 wifi ap 來架設無線網路。</li>
 </ul>
-
 <p>架設完成後，使用上並不會感覺到網路速度有受到什麼影響，不過現在網路設定更容易維護，且路由軟體也可以很容易地升級
 (畢竟是開放源碼系統)，算是一舉數得。</p>
 
@@ -71,7 +67,7 @@ PPPoE relay 的角色。因此我將家中網路架構做了改變如下：</p>
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>&copy; Ramax Lo 2019</p>
+    <p>&copy; Ramax Lo 2020</p>
   </div>
 </section>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>

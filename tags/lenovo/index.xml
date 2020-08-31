@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lenovo on Random blog</title>
+    <title>lenovo on Random blog</title>
     <link>https://ramaxlo.github.io/blog/tags/lenovo/</link>
-    <description>Recent content in Lenovo on Random blog</description>
+    <description>Recent content in lenovo on Random blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <copyright>&amp;copy; Ramax Lo 2019</copyright>
+    <copyright>&amp;copy; Ramax Lo 2020</copyright>
     <lastBuildDate>Wed, 04 Oct 2017 15:19:21 +0800</lastBuildDate>
     
 	<atom:link href="https://ramaxlo.github.io/blog/tags/lenovo/index.xml" rel="self" type="application/rss+xml" />
@@ -20,7 +20,6 @@
       <guid>https://ramaxlo.github.io/blog/post/x1c-gen5/</guid>
       <description>從工作到現在，過去用過的、加上現在正在使用中的筆電共有四款，其中二款是中國製的、二款是日本製的。和中國製的比較起來，日本製的產品確實是比較耐用；其中有一台已經用了近 10 年，除了風扇因老化而自行替換外，就沒再出現過其他問題。當然也有人說日本製的也是會買到機王，不過至少我目前還沒遇到過，因此我對於日本製的筆電一直有很好的印象，而這也反映在我挑選筆電的考量要素中。在買筆電前，我都會先去找找看有沒有日本製的型號，再來才是看價格。然而在台灣還有在賣日本製筆電的品牌寥寥可數，且價格高不可攀，令人望之卻步。
 由於目前工作用的機器是 ThinkPad T450，雖然是中國製的，不過使用起來感覺還算不錯，鍵盤好打，也算是容易安裝 Linux 系統，因此當女友想換新筆電的時候，我第一個想到的就是 ThinkPad。有一天在偶然的情況下逛到了 Lenovo JP 的官網，赫然發現竟然有出所謂「米沢生產」的 ThinkPad X1 Carbon，而且在折扣時段的價錢竟然比在台灣買還要便宜了約台幣 1 萬元，當下和女友討論後就決定找代購來下訂了。
- 
 之前一直以為 Lenovo 的筆電都是在中國生產，不過查了資料後發現 Lenovo 在 2015 年就開始在日本小批量生產部分的高階機型，x1c 就是其中之一。拿到貨後，可以在外包裝箱上看到印著「米沢生產」的字樣。這裡的「米沢」指的是 NEC 在山形縣的米澤工廠 (影片介紹)，同時這裡也是 LaVie 系列筆電的生產地。也許有人會覺得，啊料不都是一樣嗎，由誰來組裝有什麼差別？我個人以為差別可能就是差在 QA 這一塊，把關的比較嚴謹，抽到機王的機率也會比較低吧…
 至於這台中國品牌、日本製造的筆電，是否也和日本品牌、日本製造的一樣耐操，就讓時間來解答吧。</description>
     </item>
@@ -35,11 +34,11 @@
 根據 Lenovo 的硬體維護手冊，T450 有二個 M.2 插槽；其中一個已被 Wifi 網卡使用，另一個則原本是供 WWAN 使用，但若未購買搭 WWAN 的機器，就會多出一個插槽可供利用。另外需要注意的是，M.2 介面的 SSD 有二種通訊協定規格，一個是 SATA，另一個是 PCIe，並不是所有的筆電都支援這二種協定，故購買前一定要先上網查清楚，以免白花錢。又還有一點要注意，就算你確定了通訊協定規格，也不是所有廠商的 SSD 都可以和你的筆電相容，多查查網上的討論串，儘可能買有成功案例的廠牌會比較保險些。總之 M.2 SSD 就是這麼麻煩的東西。
 有興趣的人可以參考這個連結了解更多關於 M.2 SSD 的細節。
 好啦，買好了 SSD，也順利地安裝上去（硬體安裝步驟略過不提），打開筆電開關，BIOS 也順利抓到了硬體，接下來才是工程的主要部分：搬移系統檔案，設定以 SSD 為開機硬碟。以下將大略走一下執行步驟。
-準備工作  下載 openSUSE 開機映象檔，寫入到 USB 隨身碟中：
-sudo dd if=openSUSE-Leap-42.2-DVD-x86_64.iso of=/dev/sdX bs=1M  當然你也可以用其他的 Linux 開機映象檔，只要有具備救援模式功能即可。
- 備份你的系統。BJ4
+準備工作   下載 openSUSE 開機映象檔，寫入到 USB 隨身碟中：
+sudo dd if=openSUSE-Leap-42.2-DVD-x86_64.iso of=/dev/sdX bs=1M 當然你也可以用其他的 Linux 開機映象檔，只要有具備救援模式功能即可。
+  備份你的系統。BJ4
   開始搬移 首先用 USB 隨身碟開機，選擇救援模式，進入到命令列模式，然後分割 SSD 並且格式化：
-fdisk /dev/sdX mkfs.ext4 /dev/sdX1  接著將原系統磁區掛載到 /tmp/root, SSD 磁區掛載到 /tmp/root2：</description>
+fdisk /dev/sdX mkfs.ext4 /dev/sdX1 接著將原系統磁區掛載到 /tmp/root, SSD 磁區掛載到 /tmp/root2：</description>
     </item>
     
   </channel>

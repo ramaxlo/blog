@@ -42,11 +42,8 @@
     <h1 class="title">Upgrade VyOS on APU2 to Version 1.2</h1>
     <div class="content">
       <p>VyOS 下一個主要版本 1.2 終於在今年 1 月 28 號<a href="https://blog.vyos.io/vyos-1.2-crux-released">正式發布</a>。1.2 版本究竟開發了多久，沒仔細查其實我也不很清楚，只知道應該開發了超過一年的時間…不過其實想想也是合理啦，這麼冷門的專案，人力不足是可以預期的…</p>
-
 <p>雖然早已知道新版本出來了，我超想幫我的 APU2 升級的 (之前是跑 1.1.8)；然而由於工作忙碌的關係，一直抽不出一段空閒的時間來好好的弄一下。直到最近因為過年輪到我在公司值班，算是找到了一個好機會可以來玩玩。</p>
-
 <p>相較於 1.1 版是在 Debian 6 上開發，1.2 版則是基於 Debian 8 做開發，也因此在 isolinux 以及其他的設定上有了比較大的差異，以至於之前在 <a href="https://wiki.vyos.net/wiki/PC_Engines#Installation_for_Version_1.1.7">Wiki 上的文件</a>已不再適用於 1.2 版，需要再做更新。需要更新的部分如下：</p>
-
 <ul>
 <li>isolinux 的設定相較 1.1 有了很大的變化。供 serial port only 的機器使用的選項不見了，只有純 VGA console
 的開機選單可用，因此這部分需要做比較大的修改以符合 APU2 的需求。</li>
@@ -54,10 +51,8 @@
 是在做格式轉換的工作。這部分的 baud rate 設定是寫死成 9600，故也需要做修改。</li>
 <li>1.2 中安裝程式提供了一個 grub 設定檔的模版，這部分也是寫死成 9600，故需要做修改。</li>
 </ul>
-
 <p>前前後後大概花了我二天的時間做修改與測試，總算是弄好了。這些修改我也一併更新到 <a href="https://wiki.vyos.net/wiki/PC_Engines#Installation_for_Version_1.2.x">Wiki</a> 上，供同好參考。</p>
-
-<p>註：<br/>
+<p>註：<!-- raw HTML omitted -->
 自從上次把 1.1.7 的<a href="../vyos-on-apu2">安裝步驟</a>更新到 wiki 後，發現似乎愈來愈多人在論壇上問關於在 APU2
 上安裝的問題…怎麼說呢…我覺得 APU2 真的是個好物啊，價格實惠 (網路上隨便一個 x86 的單板電腦，價格都差不多要比
 APU2 貴上個四分之一以上)、效能夠用 (直上 300 / 100 沒問題)，再加上免費的 VyOS
@@ -70,7 +65,7 @@ APU2 貴上個四分之一以上)、效能夠用 (直上 300 / 100 沒問題)，
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>&copy; Ramax Lo 2019</p>
+    <p>&copy; Ramax Lo 2020</p>
   </div>
 </section>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>

@@ -61,7 +61,14 @@
  提供滾動式版本 (rolling release) 給想要嘗鮮的玩家們測試，並且開發者能夠在短時間內測試他們貢獻的新功能。 提供長期支援版本 (Long Term Support, LTS) 給企業用戶使用。LTS 版本會有二年的維護週期，在這期間內，維護者會持續測試並加入新的 bugfix 與安全更新。  然而與滾動式版本另外的不同處則是，滾動式版本的映象檔可以自由下載，LTS 版本的則只提供給付費用戶下載。也就是說，若你是企業用戶且又不想花時間自己 build LTS 版的映象檔，那麼就請花錢訂閱服務以取得更新。為了怕人誤解，以為 VyOS 又要走回 Vyatta 的老路，作者還強調你永遠可以自己 build 出 LTS 版的 iso 檔。
 此外，作者也開放貢獻者方案，也就是若你過去曾經貢獻過 VyOS 專案，那麼你可以免費得到 LTS iso 訂閱服務 (小弟也很不要臉地去要了一個 XD)。
 當然有些細節部分這裡就略過不提，我個人認為這樣的安排是合理的，畢竟在現在如此冷門的情況下，如果缺乏商業資金的挹注，開源專案就必須靠著眾人的熱情持續下去。然而熱情能夠持續多久又是個問題…若能夠利用付費服務的方式來贊助專案的開發，至少開發者們不用為了生計問題傷腦筋，也才有更多心力花在專案上。雖然我並不是對這個專案很有愛，但我很喜歡它命令列的設定方式，算是除了 RouterOS 外的開源替代品。真的希望它能夠繼續活下去…
- 作者提到，在某一個大型模組中，過去五年有貢獻程式碼的人不超過 50 個。 [return]   
+  作者提到，在某一個大型模組中，過去五年有貢獻程式碼的人不超過 50 個。 &#x21a9;&#xfe0e;
+        
+        ...<a class="button is-link" href="https://ramaxlo.github.io/blog/post/vyos-model-change/" style="height:28px">
+          Read more
+          <span class="icon is-small">
+            <i class="fa fa-angle-double-right"></i>
+          </span>
+        </a>
         
       </div>
     </article>
@@ -74,7 +81,7 @@
 雖然早已知道新版本出來了，我超想幫我的 APU2 升級的 (之前是跑 1.1.8)；然而由於工作忙碌的關係，一直抽不出一段空閒的時間來好好的弄一下。直到最近因為過年輪到我在公司值班，算是找到了一個好機會可以來玩玩。
 相較於 1.1 版是在 Debian 6 上開發，1.2 版則是基於 Debian 8 做開發，也因此在 isolinux 以及其他的設定上有了比較大的差異，以至於之前在 Wiki 上的文件已不再適用於 1.2 版，需要再做更新。需要更新的部分如下：
  isolinux 的設定相較 1.1 有了很大的變化。供 serial port only 的機器使用的選項不見了，只有純 VGA console 的開機選單可用，因此這部分需要做比較大的修改以符合 APU2 的需求。 設定檔的格式從 1.1 升級到 1.2 有了比較大的修改，因此在 1.2 中有部分的 script 是在做格式轉換的工作。這部分的 baud rate 設定是寫死成 9600，故也需要做修改。 1.2 中安裝程式提供了一個 grub 設定檔的模版，這部分也是寫死成 9600，故需要做修改。  前前後後大概花了我二天的時間做修改與測試，總算是弄好了。這些修改我也一併更新到 Wiki 上，供同好參考。
-註： 自從上次把 1.1.7 的安裝步驟更新到 wiki 後，發現似乎愈來愈多人在論壇上問關於在 APU2 上安裝的問題…怎麼說呢…我覺得 APU2 真的是個好物啊，價格實惠 (網路上隨便一個 x86 的單板電腦，價格都差不多要比 APU2 貴上個四分之一以上)、效能夠用 (直上 300 / 100 沒問題)，再加上免費的 VyOS 簡直是絕配啊…真的很想把家中的分享器都換成 APU2 啊…
+註：自從上次把 1.1.7 的安裝步驟更新到 wiki 後，發現似乎愈來愈多人在論壇上問關於在 APU2 上安裝的問題…怎麼說呢…我覺得 APU2 真的是個好物啊，價格實惠 (網路上隨便一個 x86 的單板電腦，價格都差不多要比 APU2 貴上個四分之一以上)、效能夠用 (直上 300 / 100 沒問題)，再加上免費的 VyOS 簡直是絕配啊…真的很想把家中的分享器都換成 APU2 啊…
         
       </div>
     </article>
@@ -114,7 +121,7 @@
 電源管理不正常 x1c 配備的是 i7-7500U，為第七代的 Core i CPU，openSUSE Leap 42.3 的預設 4.4 版核心似乎不能很好地支援這個較新的 CPU，以致於雖然可以正常休眠，但是從休眠狀態回復後再關機，就會發生關機不完全的現象；雖然電源燈是關閉的，但仍能感覺機身並沒有降溫的傾向；再次按電源鍵要開機，卻發現再也開不起來，結果被迫要用迴紋針去戳機背的 reset 鍵才會回復正常。搜尋了網上論壇發現有網友建議在 x1c 上安裝 Linux，最好核心要升級到 4.12 以上，驅動程式的支援才會比較完整。所以就立馬升級核心到最新的 4.13，果然問題就解決了。
 原本正常來說，升級核心需要自行下載核心原始碼來編譯；不過 openSUSE 在 OBS 上已經有 Factory 套件庫可供安裝最新版本的核心，所以只需加入新套件庫後就可以安裝。
 升級步驟如下：
-sudo zypper ar https://download.opensuse.org/repositories/Kernel:/stable/standard/ kernel-stable sudo zypper ref kernel-stable sudo zypper in kernel-default  Trackpad 中鍵無作用 也許是因為 x1c 的觸控板是比較新的硬體，openSUSE Leap 42.
+sudo zypper ar https://download.opensuse.org/repositories/Kernel:/stable/standard/ kernel-stable sudo zypper ref kernel-stable sudo zypper in kernel-default Trackpad 中鍵無作用 也許是因為 x1c 的觸控板是比較新的硬體，openSUSE Leap 42.
         
         ...<a class="button is-link" href="https://ramaxlo.github.io/blog/post/x1c-opensuse-leap-install/" style="height:28px">
           Read more
@@ -132,7 +139,6 @@ sudo zypper ar https://download.opensuse.org/repositories/Kernel:/stable/standar
       <div class="content">
         從工作到現在，過去用過的、加上現在正在使用中的筆電共有四款，其中二款是中國製的、二款是日本製的。和中國製的比較起來，日本製的產品確實是比較耐用；其中有一台已經用了近 10 年，除了風扇因老化而自行替換外，就沒再出現過其他問題。當然也有人說日本製的也是會買到機王，不過至少我目前還沒遇到過，因此我對於日本製的筆電一直有很好的印象，而這也反映在我挑選筆電的考量要素中。在買筆電前，我都會先去找找看有沒有日本製的型號，再來才是看價格。然而在台灣還有在賣日本製筆電的品牌寥寥可數，且價格高不可攀，令人望之卻步。
 由於目前工作用的機器是 ThinkPad T450，雖然是中國製的，不過使用起來感覺還算不錯，鍵盤好打，也算是容易安裝 Linux 系統，因此當女友想換新筆電的時候，我第一個想到的就是 ThinkPad。有一天在偶然的情況下逛到了 Lenovo JP 的官網，赫然發現竟然有出所謂「米沢生產」的 ThinkPad X1 Carbon，而且在折扣時段的價錢竟然比在台灣買還要便宜了約台幣 1 萬元，當下和女友討論後就決定找代購來下訂了。
- 
 之前一直以為 Lenovo 的筆電都是在中國生產，不過查了資料後發現 Lenovo 在 2015 年就開始在日本小批量生產部分的高階機型，x1c 就是其中之一。拿到貨後，可以在外包裝箱上看到印著「米沢生產」的字樣。這裡的「米沢」指的是 NEC 在山形縣的米澤工廠 (影片介紹)，同時這裡也是 LaVie 系列筆電的生產地。也許有人會覺得，啊料不都是一樣嗎，由誰來組裝有什麼差別？我個人以為差別可能就是差在 QA 這一塊，把關的比較嚴謹，抽到機王的機率也會比較低吧…
 至於這台中國品牌、日本製造的筆電，是否也和日本品牌、日本製造的一樣耐操，就讓時間來解答吧。
         
@@ -224,7 +230,7 @@ APU2 這塊板子也很特別，很多市面上賣的 x86 路由器都會提供 
 
 <section class="section">
   <div class="container has-text-centered">
-    <p>&copy; Ramax Lo 2019</p>
+    <p>&copy; Ramax Lo 2020</p>
   </div>
 </section>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
