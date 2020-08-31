@@ -1,0 +1,18 @@
+title = "Random blog"
+baseurl = "https://ramaxlo.github.io/blog"
+languageCode = "zh-tw"
+copyright = "&copy; Ramax Lo 2019"
+
+[params]
+
+[params.highlight]
+style = "github"
+languages = ["go", "bash"]
+
+[[params.social]]
+url = "https://github.com/ramaxlo"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "/blog/index.xml"
+fa_icon = "fa-rss"
