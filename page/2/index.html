@@ -40,6 +40,21 @@
   <div class="container">
     
     <article>
+      <h2 class="subtitle is-6">January 16, 2017</h2>
+      <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/freedom-controlling-your-machine/">掌控你的電腦的自由</a></h1>
+      <div class="content">
+        最近觀摩了一下同事所寫的 Ansible playbook，能夠自動啟動多個 AWS EC2 實體，果然精妙。當中討論到為何在某個設定為何要把 Python 的路徑設為 /usr/local/bin/python，而非一般的 /usr/bin/python 時，同事回答說因為 Mac OS 的 Python 版本太舊，無法跑某些 task，不這樣設的話，Ansible 預設只會用 Mac OS 的版本。然後我就很白目地問了：
+ 為什麼不把 /usr/bin/python 砍掉，然後建一個 symlink 指向新版本？
+ 身為一個 Linux 的使用者，會做這樣類似的事情是很正常的；例如在安裝完 ubuntu 後，我習慣會把 /bin/sh 砍掉，重新指向到 /bin/bash。但是同事回我說不行，在 Mac OS 下，你不能動 /usr/bin 目錄下的內容，即使你是 root 也不行。
+蛤？？？我沒聽錯吧？
+後來查了一下，原來這招叫做 System Integrity Protection。
+我可以理解，這樣做的原因是為了安全性考量，如果是一般不懂資安的使用者，那也就算了；但對於 power user 而言，大家都是專業人士，這樣做我只覺得不可思議。我了解我在做什麼事情，我也體認到會有什麼樣的風險，也取得 root 權限了，我要對我的電腦做什麼事是我的自由，為何要剝奪我的自由？
+固然資安非常重要，但根本之道應該是要教育使用者要有資安意識；身為你所購買電腦的主人，你有責任要維持電腦的正常運作不是嗎？要經常安裝重大安全性更新，不隨便亂執行來路不明的軟體，不隨便亂點奇怪的網站……這樣才能讓你的電腦永保安康；而不是硬生生地直接把使用者掌控電腦的權力拿掉，這根本是因噎廢食的作法。若使用者缺乏正確的觀念，你限制再多也無法阻止電腦被駭客入侵。
+        
+      </div>
+    </article>
+    
+    <article>
       <h2 class="subtitle is-6">January 11, 2017</h2>
       <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/t450-add-ssd/">Add M.2 SSD For T450</a></h1>
       <div class="content">

@@ -40,6 +40,17 @@
   <div class="container">
     
     <article>
+      <h2 class="subtitle is-6">August 31, 2020</h2>
+      <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/t14s-gen1/">入手 ThinkPad T14s AMD Gen1</a></h1>
+      <div class="content">
+        自從入手 T450 使用到現在也已過了五年 (時間真的過得很快)，除了在保固內換過一次硬碟外，幾乎沒再出過什麼問題。看著每年一代又一代的 T 系列推陳出新，原本是打算再戰個 2~3 年再換的，不過由於今年發布的消息說將會出搭載 AMD Ryzen Pro 4000 系列的 T 系列，心中真是一陣雀躍。接著等到了今年下半年才在官網上架。搭載 Ryzen 7、16G ram、512G SSD 的機型大約 37000 出頭，足足比對應的 intel 版本要便宜個 8~9k，心想這真是香啊，於是索性就下訂了。
+等了約 3 週到貨後，立馬安裝 openSUSE Tumbleweed，安裝過程就不多加贅述。雖然是滾動版本，但安裝過程其實相當平順，沒有什麼大問題，檔案系統也從過去習慣的 LVM + ext4 改成全面使用 Btrfs。安裝完成後，大部分的硬體都可以偵測到並加以驅動。當然畢竟還是相當新的硬體，仍然會有一些小問題發生，在此條列如下：
+ 有線網路 (rtl8168) 可以正常驅動，然而在插入網路線的時候，驅動程式似乎無法偵測網路線插入。 必須要先進休眠狀態後，插入網路線，再喚醒才能偵測。 由於目前 Tumbleweed 使用的核心版本為 5.8.0，Virtualbox 6.1.12 無法在該版本上正常運作。詳情見 Bugzilla 的討論。 FnLock 的燈號不會根據目前狀態亮滅 無法正常休眠，也就是休眠後，燈號不會轉成呼吸燈，CPU 也還在運轉狀態。後來在論壇上找到解法，必須先進 bios 中的 config -&gt; power -&gt; sleep state 設定，將 Windows10 改為 Linux。  最後花了幾天時間將在舊機器的資料搬移過來，就開始做為正式的工作機了。相信上述的小問題會因為驅動程式的陸續更新而慢慢解決。
+        
+      </div>
+    </article>
+    
+    <article>
       <h2 class="subtitle is-6">March 9, 2019</h2>
       <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/apu2-home-router/">使用 APU2 架設家庭路由器</a></h1>
       <div class="content">
@@ -176,21 +187,6 @@ APU2 這塊板子也很特別，很多市面上賣的 x86 路由器都會提供 
 然後基本的上網設定弄完了，我又花了時間再切一個網段出來當作 guest network，然後再加防火牆規則限制連線，接著再花時間研究怎麼限流，弄好了以後，我又在研究怎麼標記封包來做 QoS，然後為了要自動把某些新上線的機器加入群組，又開始研究怎麼寫 script…是的，你可以在 RouterOS 上寫 script，還可以設定排程來執行這些 script…這真是太神奇了……
 這樣玩一輪下來，我覺得 RouterOS 是一個非常有彈性的路由軟體，幾乎都能做到你想做的網路設定，非常適合給具備網路知識的人來使用，專業網管自然不在話下。不過對一般使用者，它的學習曲線就會很陡峭，難以上手。無怪乎 pchome 幾乎沒賣這類產品，討論的網友似乎也很小眾…
 阿，忘了提測速的結果，在接有線網路的情況下，網速直逼公司的頻寬上限，比那 Netgear 好太多了…
-        
-      </div>
-    </article>
-    
-    <article>
-      <h2 class="subtitle is-6">January 16, 2017</h2>
-      <h1 class="title"><a href="https://ramaxlo.github.io/blog/post/freedom-controlling-your-machine/">掌控你的電腦的自由</a></h1>
-      <div class="content">
-        最近觀摩了一下同事所寫的 Ansible playbook，能夠自動啟動多個 AWS EC2 實體，果然精妙。當中討論到為何在某個設定為何要把 Python 的路徑設為 /usr/local/bin/python，而非一般的 /usr/bin/python 時，同事回答說因為 Mac OS 的 Python 版本太舊，無法跑某些 task，不這樣設的話，Ansible 預設只會用 Mac OS 的版本。然後我就很白目地問了：
- 為什麼不把 /usr/bin/python 砍掉，然後建一個 symlink 指向新版本？
- 身為一個 Linux 的使用者，會做這樣類似的事情是很正常的；例如在安裝完 ubuntu 後，我習慣會把 /bin/sh 砍掉，重新指向到 /bin/bash。但是同事回我說不行，在 Mac OS 下，你不能動 /usr/bin 目錄下的內容，即使你是 root 也不行。
-蛤？？？我沒聽錯吧？
-後來查了一下，原來這招叫做 System Integrity Protection。
-我可以理解，這樣做的原因是為了安全性考量，如果是一般不懂資安的使用者，那也就算了；但對於 power user 而言，大家都是專業人士，這樣做我只覺得不可思議。我了解我在做什麼事情，我也體認到會有什麼樣的風險，也取得 root 權限了，我要對我的電腦做什麼事是我的自由，為何要剝奪我的自由？
-固然資安非常重要，但根本之道應該是要教育使用者要有資安意識；身為你所購買電腦的主人，你有責任要維持電腦的正常運作不是嗎？要經常安裝重大安全性更新，不隨便亂執行來路不明的軟體，不隨便亂點奇怪的網站……這樣才能讓你的電腦永保安康；而不是硬生生地直接把使用者掌控電腦的權力拿掉，這根本是因噎廢食的作法。若使用者缺乏正確的觀念，你限制再多也無法阻止電腦被駭客入侵。
         
       </div>
     </article>

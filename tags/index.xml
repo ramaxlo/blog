@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>&amp;copy; Ramax Lo 2020</copyright>
-    <lastBuildDate>Sat, 09 Mar 2019 22:21:19 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2020 14:12:14 +0800</lastBuildDate>
     
 	<atom:link href="https://ramaxlo.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>lenovo</title>
+      <link>https://ramaxlo.github.io/blog/tags/lenovo/</link>
+      <pubDate>Mon, 31 Aug 2020 14:12:14 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/lenovo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>t14s</title>
+      <link>https://ramaxlo.github.io/blog/tags/t14s/</link>
+      <pubDate>Mon, 31 Aug 2020 14:12:14 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/tags/t14s/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>apu2</title>
@@ -63,15 +81,6 @@
       <pubDate>Thu, 05 Oct 2017 23:59:40 +0800</pubDate>
       
       <guid>https://ramaxlo.github.io/blog/tags/x1c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lenovo</title>
-      <link>https://ramaxlo.github.io/blog/tags/lenovo/</link>
-      <pubDate>Wed, 04 Oct 2017 15:19:21 +0800</pubDate>
-      
-      <guid>https://ramaxlo.github.io/blog/tags/lenovo/</guid>
       <description></description>
     </item>
     
