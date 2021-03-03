@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>&amp;copy; Ramax Lo 2020</copyright>
-    <lastBuildDate>Thu, 05 Oct 2017 23:59:40 +0800</lastBuildDate>
-    
-	<atom:link href="https://ramaxlo.github.io/blog/tags/x1c/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 05 Oct 2017 23:59:40 +0800</lastBuildDate><atom:link href="https://ramaxlo.github.io/blog/tags/x1c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ThinkPad X1 Carbon openSUSE Leap 安裝</title>
       <link>https://ramaxlo.github.io/blog/post/x1c-opensuse-leap-install/</link>

@@ -7,10 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>&amp;copy; Ramax Lo 2020</copyright>
-    <lastBuildDate>Mon, 31 Aug 2020 14:12:14 +0800</lastBuildDate>
-    
-	<atom:link href="https://ramaxlo.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 03 Mar 2021 23:09:21 +0800</lastBuildDate><atom:link href="https://ramaxlo.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>轉移到 Gemini capsule</title>
+      <link>https://ramaxlo.github.io/blog/post/migrate-to-gemini/</link>
+      <pubDate>Wed, 03 Mar 2021 23:09:21 +0800</pubDate>
+      
+      <guid>https://ramaxlo.github.io/blog/post/migrate-to-gemini/</guid>
+      <description>最近發現到 Gemini 這個可說是返樸歸真的 web protocol 讓人覺得很有意思。它有幾個特性：
+ 不支援 style sheet 不支援 scripting 僅支援有限的類 markdown 語法 強迫使用 TLS 伺服器除了回傳狀態值與 MIME 類型在標頭，不允許回傳或要求其他資訊  如此極為限制的 protocol，使得現代 web 中常使用的 javascript、cookie、session 等技術變得不可行。我覺得這非常適合像我這樣偶爾寫寫 blog 的人，不用再擔心排版、或是使用靜態網頁產生器的問題；反正就照著固定的格式寫，render 的部分就讓瀏覽器去傷腦筋吧…
+是故最近決定把現在在 github page 上的文章都搬去 Gemini capsule，而這裡就不再更新了。新站台在此。</description>
+    </item>
     
     <item>
       <title>入手 ThinkPad T14s AMD Gen1</title>

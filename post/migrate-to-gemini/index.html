@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>轉移到 Gemini capsule | Random blog</title>
+<link rel="stylesheet" href="https://ramaxlo.github.io/blog/css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
+
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://ramaxlo.github.io/blog"><h1 class="title is-4">Random blog</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/ramaxlo">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/blog/index.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">March 3, 2021</h2>
+    <h1 class="title">轉移到 Gemini capsule</h1>
+    <div class="content">
+      <p>最近發現到 <a href="https://en.wikipedia.org/wiki/Gemini_(protocol)">Gemini</a> 這個可說是返樸歸真的 web protocol 讓人覺得很有意思。它有幾個特性：</p>
+<ul>
+<li>不支援 style sheet</li>
+<li>不支援 scripting</li>
+<li>僅支援有限的類 markdown 語法</li>
+<li>強迫使用 TLS</li>
+<li>伺服器除了回傳狀態值與 MIME 類型在標頭，不允許回傳或要求其他資訊</li>
+</ul>
+<p>如此極為限制的 protocol，使得現代 web 中常使用的 javascript、cookie、session
+等技術變得不可行。我覺得這非常適合像我這樣偶爾寫寫 blog 的人，不用再擔心排版、或是使用靜態網頁產生器的問題；反正就照著固定的格式寫，render 的部分就讓瀏覽器去傷腦筋吧…</p>
+<p>是故最近決定把現在在 github page 上的文章都搬去 Gemini capsule，而這裡就不再更新了。新站台<a href="https://ramax.flounder.online">在此</a>。</p>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Ramax Lo 2020</p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/go.min.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/bash.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+

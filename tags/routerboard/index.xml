@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>&amp;copy; Ramax Lo 2020</copyright>
-    <lastBuildDate>Sat, 25 Mar 2017 03:56:51 +0800</lastBuildDate>
-    
-	<atom:link href="https://ramaxlo.github.io/blog/tags/routerboard/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 25 Mar 2017 03:56:51 +0800</lastBuildDate><atom:link href="https://ramaxlo.github.io/blog/tags/routerboard/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>轉移網路到 RouterBoard</title>
       <link>https://ramaxlo.github.io/blog/post/transfer-to-routerboard/</link>
